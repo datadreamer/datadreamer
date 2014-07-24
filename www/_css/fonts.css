@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'DINMediumRegular';
+    src: url('../_fonts/dinm____-webfont.eot');
+    src: url('../_fonts/dinm____-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../_fonts/dinm____-webfont.woff') format('woff'),
+         url('../_fonts/dinm____-webfont.ttf') format('truetype'),
+         url('../_fonts/dinm____-webfont.svg#DINMediumRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DINLightRegular';
+    src: url('../_fonts/dinl__-webfont.eot');
+    src: url('../_fonts/dinl__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../_fonts/dinl__-webfont.woff') format('woff'),
+         url('../_fonts/dinl__-webfont.ttf') format('truetype'),
+         url('../_fonts/dinl__-webfont.svg#DINLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BauhausRegular';
+    src: url('../_fonts/bauhaus-webfont.eot');
+    src: url('../_fonts/bauhaus-webfont.eot?\#iefix') format('embedded-opentype'),
+         url('../_fonts/bauhaus-webfont.woff') format('woff'),
+         url('../_fonts/bauhaus-webfont.ttf') format('truetype'),
+         url('../_fonts/bauhaus-webfont.svg#BauhausRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
