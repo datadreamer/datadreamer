@@ -1,16 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html class="no-js">
 	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>datadreamer - the work of aaron siegel</title>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		<meta name="description" content="Computational information design, interactive art, and data visualization created over the past decade by Aaron Siegel.">
-		<link rel="stylesheet" type="text/css" href="_css/fonts.css" />
-		<link rel="stylesheet" type="text/css" href="_css/site.css" />
+		<meta name="description" content="Computational information design, interactive art, and data visualizations created over the past decade by Aaron Siegel.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="_css/normalize.min.css">
+        <!--<link rel="stylesheet" href="_css/main.css">-->
+		<link rel="stylesheet" href="_css/fonts.css" />
+		<link rel="stylesheet" href="_css/site.css" />
+
+        <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <!--
 		<script src="_js/jquery-1.9.1.min.js"></script>
 		<script src="_js/jquery.masonry.min.js"></script>
 		<script src="_js/home.js"></script>
+		-->
 	</head>
 	
 	<body>
@@ -40,14 +47,9 @@
 		<div id="container">
 		
 			<div class="item">
-				<div class="bwthumb">
-					<img class="bwthumb" src="_images/timelinehallway_1_280bw.jpg" onload="$(this).fadeIn();" />
-				</div>
-				<div class="colorthumb">
-					<img class="colorthumb" src="_images/timelinehallway_1_280.jpg" />
-				</div>
+				<img class="thumb" src="_images/timelinehallway_1_280.jpg" />
 				<div class="title">
-					FACEBOOK TIMELINE HALLWAY
+					Facebook Timeline Hallway
 				</div>
 				<div class="date">
 					SPRING 2012 - WORK
@@ -58,14 +60,9 @@
 			</div>
 			
 			<div class="item">
-				<div class="bwthumb">
-					<img class="bwthumb" src="_images/f8_280bw.jpg" onload="$(this).fadeIn();" />
-				</div>
-				<div class="colorthumb">
-					<img class="colorthumb" src="_images/f8_280.jpg" />
-				</div>
+				<img class="thumb" src="_images/f8_1_280.jpg" />
 				<div class="title">
-					F8 ATTENDEE MAP
+					F8 Attendee Map
 				</div>
 				<div class="date">
 					FALL 2011 - WORK
@@ -77,14 +74,9 @@
 		
 		
 			<div class="item">
-				<div class="bwthumb">
-					<img class="bwthumb" src="_images/utah_280bw.jpg" onload="$(this).fadeIn();" />
-				</div>
-				<div class="colorthumb">
-					<img class="colorthumb" src="_images/utah_280.jpg" />
-				</div>
+				<img class="thumb" src="_images/utah_280.jpg" />
 				<div class="title">
-					UTAH MUSEUM OF NATURAL HISTORY
+					Utah Museum of Natural History
 				</div>
 				<div class="date">
 					SUMMER 2011 - WORK
@@ -95,14 +87,9 @@
 			</div>
 		
 			<div class="item">
-				<div class="bwthumb">
-					<img class="bwthumb" src="_images/backtalk_280bw.jpg" onload="$(this).fadeIn();" />
-				</div>
-				<div class="colorthumb">
-					<img class="colorthumb" src="_images/backtalk_280.jpg" />
-				</div>
+				<img class="thumb" src="_images/backtalk_1_280.jpg" />
 				<div class="title">
-					BACKTALK
+					BackTalk
 				</div>
 				<div class="date">
 					SUMMER 2011 - WORK
@@ -114,14 +101,9 @@
 		
 		
 			<div class="item">
-				<div class="bwthumb">
-					<img class="bwthumb" src="_images/realtimetalk_280bw.jpg" onload="$(this).fadeIn();" />
-				</div>
-				<div class="colorthumb">
-					<img class="colorthumb" src="_images/realtimetalk_280.jpg" />
-				</div>
+				<img class="thumb" src="_images/realtimetalk_280.jpg" />
 				<div class="title">
-					LIVE SINGAPORE: REAL-TIME TALK
+					Live Singapore: Real-Time Talk
 				</div>
 				<div class="date">
 					SPRING 2011 - WORK
@@ -133,14 +115,9 @@
 		
 		
 			<div class="item">
-				<div class="bwthumb">
-					<img class="bwthumb" src="_images/formulaonecity_280bw.jpg" onload="$(this).fadeIn();" />
-				</div>
-				<div class="colorthumb">
-					<img class="colorthumb" src="_images/formulaonecity_280.jpg" />
-				</div>
+				<img class="thumb" src="_images/formulaonecity_1_280.jpg" />
 				<div class="title">
-					LIVE SINGAPORE: FORMULA ONE CITY
+					Live Singapore: Formula One City
 				</div>
 				<div class="date">
 					SPRING 2011 - WORK
@@ -155,23 +132,24 @@
 		
 		<!-- FOOTER CONTAINS COPYRIGHT INFO AND PRAETORIANS EASTER EGG -->
 		
-		<div id="footer">
-			<div id="copyright">
-				&#169; AARON SIEGEL 2004 - 2013.
+		<div id="bottom">
+			<div id="footer">
+				<div id="copyright">
+					&#169; AARON SIEGEL 2004 - 2013.
+				</div>
+				<div id="socialmedia">
+					<a href="https://www.facebook.com/datadreamerlabs"><img src="_icons/facebook_gray.png" width="16" border="0"/></a>
+					<a href="google.com/+AaronSiegeldatadreamer"><img src="_icons/gplus_gray.png" width="16" border="0"/></a>
+					<a href="http://www.linkedin.com/profile/view?id=72172706"><img src="_icons/linkedin_gray.png" width="16" border="0"/></a>
+					<a href="http://twitter.com/datadreamer"><img src="_icons/twitter_gray.png" width="16" border="0"/></a>
+					<a href="https://vimeo.com/user352725"><img src="_icons/vimeo_gray.png" width="16" border="0"/></a>
+					<a href="http://www.youtube.com/user/alt4ir"><img src="_icons/youtube_gray.png" width="16" border="0"/></a>
+				</div>
+				<div id="praetorians">
+					<a href="praetorians.html" class="hidden">&#960;</a>
+				</div>
 			</div>
-			<div id="socialmedia">
-				<a href="http://www.facebook.com/pages/datadreamer/117021948323252"><img src="_icons/facebook_gray.png" width="16" border="0"/></a>
-				<a href="https://plus.google.com/u/0/103146902543763414412/posts"><img src="_icons/gplus_gray.png" width="16" border="0"/></a>
-				<a href="http://www.linkedin.com/profile/view?id=72172706"><img src="_icons/linkedin_gray.png" width="16" border="0"/></a>
-				<a href="http://twitter.com/datadreamer"><img src="_icons/twitter_gray.png" width="16" border="0"/></a>
-				<a href="https://vimeo.com/user352725"><img src="_icons/vimeo_gray.png" width="16" border="0"/></a>
-				<a href="http://www.youtube.com/user/alt4ir"><img src="_icons/youtube_gray.png" width="16" border="0"/></a>
-			</div>
-			<div id="praetorians">
-				<a href="praetorians.html" class="hidden">&#960;</a>
-			</div>
-		</div>
-			
+		</div>	
     
 	</body>
 </html>
