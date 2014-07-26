@@ -1,5 +1,6 @@
 $(window).load(function(){
 
+	/*
 	$('div[class=item]').mouseover(function(){
 		$(this).children('.colorthumb').children('.colorthumb').stop().animate({opacity:1},1);
 	});
@@ -17,10 +18,12 @@ $(window).load(function(){
 	setInterval(resize, 33);
 	
 	resize();
+	*/
 	$('.slideshow').load("/_php/gallery.php?type=canvas&item=home&cols=3", canvasLoaded);
 	
 });
 
+/*
 function resize(){
 	// get left position and width of masonry container
 	var l = $('#container').css('marginLeft').replace('px', '');
@@ -41,6 +44,7 @@ function resize(){
 	// resize canvas to fit
 	//resizeGalleryCanvas();
 }
+*/
 
 function canvasLoaded(r, s, x){
 	$('#slideshow').fadeIn(10);
