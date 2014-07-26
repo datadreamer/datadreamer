@@ -55,8 +55,8 @@ body{
 }
 
 #videocontainer{
-	width: 600px;
-	height: 300px;
+	width: 300px;
+	height: 178px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 10px;
@@ -67,15 +67,15 @@ body{
 
 #video{
 	float: left;
-	width: 580px;
-	height: 280px;
+	width: 280px;
+	height: 158px;
 	margin: 10px;
 	background-color: #333333;
 }
 
 #videoframe{
-	width: 580px;
-	height: 280px;
+	width: 280px;
+	height: 158px;
 	margin: 0px;
 }
 
@@ -317,6 +317,15 @@ a.logo{
 	#contentlink{
 		font-size: 14px;
 	}
+	#videocontainer{
+		width: 610px;
+	}
+	#video{
+		width: 590px;
+	}
+	#videoframe{
+		width: 590px;
+	}
 }
 
 @media only screen and (min-width: 960px) {		/* three */
@@ -358,6 +367,15 @@ a.logo{
 	#contentlink{
 		font-size: 14px;
 	}
+	#videocontainer{
+		width: 920px;
+	}
+	#video{
+		width: 900px;
+	}
+	#videoframe{
+		width: 900px;
+	}
 }
 
 @media only screen and (min-width: 1280px) {	/* four */
@@ -392,6 +410,15 @@ a.logo{
 	}
 	#contentlink{
 		font-size: 18px;
+	}
+	#videocontainer{
+		width: 1230px;
+	}
+	#video{
+		width: 1210px;
+	}
+	#videoframe{
+		width: 1210px;
 	}
 }
 
@@ -428,6 +455,15 @@ a.logo{
 	#contentlink{
 		font-size: 24px;
 	}
+	#videocontainer{
+		width: 1540px;
+	}
+	#video{
+		width: 1520px;
+	}
+	#videoframe{
+		width: 1520px;
+	}
 }
 
 @media only screen and (min-width: 1920px) {	/* six */
@@ -462,6 +498,15 @@ a.logo{
 	}
 	#contentlink{
 		font-size: 24px;
+	}
+	#videocontainer{
+		width: 1850px;
+	}
+	#video{
+		width: 1830px;
+	}
+	#videoframe{
+		width: 1830px;
 	}
 }
 

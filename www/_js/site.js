@@ -89,7 +89,7 @@ function resize(){
 	}
 	
 	loaded = true;							// on first load, mark as loaded
-	
+	/*
 	setCols();								// set columns
 	
 	l = (wiw - w) / 2;						// left position
@@ -107,6 +107,8 @@ function resize(){
 	$('#gallery').css({left: l+"px", width: w, height: h+20});
 	$('#galleryimage').css({width: w-20, height: h});
 	$('#videocontainer').css({left: l+"px", width: w, height: ((w-20) * videoAspectRatio)+20});
+	*/
+	$('#videocontainer').css({width: w, height: ((w-20) * videoAspectRatio)+20});
 	$('#video').css({width: w-20, height: (w-20) * videoAspectRatio});
 	$('#videoframe').css({width: w-20, height: (w-20) * videoAspectRatio});
 }
