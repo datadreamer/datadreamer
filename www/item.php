@@ -52,24 +52,36 @@ $result = mysql_query("SELECT * FROM items WHERE id={$item}");
 $row = mysql_fetch_array($result);
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html class="no-js">
 	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>datadreamer - <?php echo $row[1]; ?></title>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="Computational information design, interactive art, and data visualizations created over the past decade by Aaron Siegel.">
 		<?php
 			if(lite_detection()){
-				echo "<meta name=\"viewport\" content=\"target-densitydpi=device-dpi, width=320\"/>";
+				// use this to force the viewport of all detected mobile devices to 320px wide.
+				//echo "<meta name=\"viewport\" content=\"target-densitydpi=device-dpi, width=320\"/>";
+				echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
+			} else {
+				echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
 			}
 		?>
-		<meta name="description" content="Computational information design, interactive art, and data visualization created over the past decade by Aaron Siegel.">
-		<link rel="stylesheet" type="text/css" href="_css/fonts.css" />
-		<link rel="stylesheet" type="text/css" href="_css/site.css" />
+		
+		<link rel="stylesheet" href="_css/normalize.min.css">
+		<link rel="stylesheet" href="_css/fonts.css" />
+		<link rel="stylesheet" href="_css/site.css" />
+
+		<!--
 		<script src="_js/jquery-1.9.1.min.js"></script>
 		<script src="_js/jquery.masonry.min.js"></script>
 		<script src="_js/jquery.waitforimages.js"></script>
+		-->
+		
+		<script src="_js/vendor/jquery-1.11.0.min.js"></script>
+		<script src="_js/jquery.waitforimages.js"></script>
+        <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		<script src="_js/site.js"></script>
 		
 		<script>

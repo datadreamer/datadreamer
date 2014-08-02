@@ -57,7 +57,9 @@ if(!empty($_GET['item'])){
 		<meta name="description" content="Computational information design, interactive art, and data visualizations created over the past decade by Aaron Siegel.">
 		<?php
 			if(lite_detection()){
-				echo "<meta name=\"viewport\" content=\"target-densitydpi=device-dpi, width=320\"/>";
+				// use this to force the viewport of all detected mobile devices to 320px wide.
+				//echo "<meta name=\"viewport\" content=\"target-densitydpi=device-dpi, width=320\"/>";
+				echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
 			} else {
 				echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
 			}
