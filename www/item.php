@@ -62,8 +62,8 @@ $row = mysql_fetch_array($result);
 		<?php
 			if(lite_detection()){
 				// use this to force the viewport of all detected mobile devices to 320px wide.
-				//echo "<meta name=\"viewport\" content=\"target-densitydpi=device-dpi, width=320\"/>";
-				echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
+				echo "<meta name=\"viewport\" content=\"target-densitydpi=device-dpi, width=320\"/>";
+				//echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
 			} else {
 				echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
 			}
