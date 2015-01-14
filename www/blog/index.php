@@ -92,7 +92,7 @@
 						$r = $row['r'];
 						$g = $row['g'];
 						$b = $row['b'];
-						echo "<div class='postmenuitem'><a href='http://www.datadreamer.com/blog/{$link}' style='color:rgb({$r},{$g},{$b});'>{$title}</a></div>";
+						echo "<a href='http://www.datadreamer.com/blog/{$link}' style='color:rgb({$r},{$g},{$b});'>{$title}</a>";
 					}
 				?>
 			</div>

@@ -104,25 +104,22 @@ a.sublogo{
     width: 0px;
 }
 
-div.postmenuitem{
-	border-bottom: 1px #333 solid;
-	height: 40px;
-    overflow: hidden;
-}
-
-div.postmenuitem a{
+#postmenu a{
 	float: left;
+	clear: both;
 	font-family: 'DINMediumRegular';
 	font-size: 10px;
 	font-weight: 500;
 	color: #fff;
 	text-decoration: none;
-	margin: 0px;
+	width: 100%;
 	height: 20px;
-	padding: 10px;
+	padding: 10px 0 10px 10px;
+	border-bottom: 1px #333 solid;
+    overflow: hidden;
 }
 
-div.postmenuitem a:hover{
+#postmenu a:hover{
 	background-color: #333;
 }
 
@@ -324,12 +321,9 @@ div.sharebutton img{
 }
 
 @media only screen and (min-width: 720px) {
-	div.postmenuitem{
-		height: 40px;
-		padding: 10px;
-	}
 	#postmenu a{
 		font-size: 18px;
+		height: 40px;
 	}
 	#tagmenu{
 		display: block;
@@ -354,6 +348,9 @@ div.sharebutton img{
 	p.caption{
 		font-size: 14px;
 	}
+	div.tags {
+		font-size: 18px;		
+	}
 	div.sharebutton img{
 		width: 48px;
 		height: 48px;
@@ -361,12 +358,9 @@ div.sharebutton img{
 }
 
 @media only screen and (min-width: 1080px) {
-	div.postmenuitem{
-		height: 70px;
-		padding: 10px;
-	}
 	#postmenu a{
 		font-size: 32px;
+		height: 70px;
 	}
 	#tagmenu a{
 		font-size: 38px;
@@ -383,14 +377,87 @@ div.sharebutton img{
 	}
 	div.entrybody{
 		font-size: 22px;
-	}p.caption{
+	}
+	p.caption{
 		font-size: 18px;
+	}
+	div.tags {
+		font-size: 22px;
+		margin: 10px 10px 20px 10px;		
+	}
+	div.sharebutton img{
+		width: 64px;
+		height: 64px;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	div.entrydate{
+		font-size: 24px;
+	}
+	div.entrybody{
+		font-size: 32px;
+	}
+	div.entrybody p{
+		margin: 20px 10px 30px 10px;
+	}
+	p.caption{
+		font-size: 24px;
+	}
+	div.tags {
+		font-size: 32px;
+		margin: 10px 10px 30px 10px;
 	}
 	div.sharebutton{
 		margin-right: 20px;
 	}
 	div.sharebutton img{
-		width: 64px;
-		height: 64px;
+		width: 128px;
+		height: 128px;
+	}
+}
+
+
+@media only screen and (min-width: 1920px) {
+	div.postmenuitem{
+		padding: 0px;
+	}
+	#postmenu a{
+		font-size: 40px;
+		padding: 10px;
+		height: 120px;
+	}
+	#tagmenu a{
+		font-size: 70px;
+		padding: 40px 0 0 10px;
+		height: 101px;
+	}
+	#mainmenu a{
+		font-size: 120px;
+		padding: 10px 10px 10px 0;
+		height: 121px;
+	}
+	div.entrydate{
+		font-size: 32px;
+	}
+	div.entrybody{
+		font-size: 48px;
+	}
+	div.entrybody p{
+		margin: 40px 10px 50px 10px;
+	}
+	p.caption{
+		font-size: 32px;
+	}
+	div.tags {
+		font-size: 48px;
+		margin: 10px 10px 50px 10px;
+	}
+	div.sharebutton{
+		margin-right: 40px;
+	}
+	div.sharebutton img{
+		width: 128px;
+		height: 128px;
 	}
 }
