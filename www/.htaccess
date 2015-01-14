@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^about$ /about.php [L]
+RewriteRule ^contact$ /contact.php [L]
+RewriteRule ^blog/([a-z0-9\-]+)$ /blog/index.php?link=$1 [L]

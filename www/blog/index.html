@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>datadreamer blog</title>
+		<meta name="description" content="Explorations of data, systems, interactions, and environments.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../_css/normalize.min.css">
+		<link rel="stylesheet" href="../_css/fonts.css" />
+		<link rel="stylesheet" href="_css/site.css" />
+
+		<script src="../_js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="../_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		<script src="../_js/jquery.fittext.js"></script>
+		<script src="_js/menu.js"></script>
+	</head>
+	
+	<body>
+		
+		<!-- HEADER CONTAINS TITLE -->
+		
+		<div id="header" class="noselect">
+			<div id="logo">
+				<a class="logo" href="/">datadreamer</a>
+			</div>
+			<div id="menubutton">
+				<a href="javascript:toggleMenu();"><img src="_img/menubutton.png"></a>
+			</div>
+			<div id="sublogo">
+				THE WORK OF <a class="sublogo" href="/about">AARON SIEGEL</a>
+			</div>
+		</div>
+
+		<!-- MENU IS FIXED AND DISPLAY IS TOGGLED -->
+
+		<div id="menu" class="noselect">
+			<hr>
+			<div id="menutitles">
+				<div class="menutitle">
+					<div class="menutitletext">
+						Posts
+					</div>
+				</div>
+				<div class="menutitle" id="tagmenutitle">
+					<div class="menutitletext">
+						Tags
+					</div>
+				</div>
+				<div class="menutitle" style="border-right: none; width: 33%;">
+					<div class="menutitletext">
+						Menu
+					</div>
+				</div>
+			</div>
+			<div id="postmenu">
+				<div class="postmenuitem">
+					<a href="#" style="color:#09f;">The title is what you see first, but read the fucking article.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#0f0;">Data visualization and modernism; exploring the role of abstraction and really long titles.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#cc0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#f60;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#f00;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#09f;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#0f0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#cc0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#f60;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#f00;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#09f;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#0f0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#cc0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#f60;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#f00;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#09f;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#0f0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#cc0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#f60;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div class="postmenuitem">
+					<a href="#" style="color:#f00;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+				</div>
+				<div style="height:90px"></div>
+			</div>
+			<div id="tagmenu">
+				<a href="#">app <font class="tagnum">3</font></a>
+				<a href="#">art <font class="tagnum">6</font></a>
+				<a href="#">data <font class="tagnum">4</font></a>
+				<a href="#">graffiti <font class="tagnum">1</font></a>
+				<a href="#">installation <font class="tagnum">5</font></a>
+				<a href="#">interactive <font class="tagnum">8</font></a>
+				<a href="#">losangeles <font class="tagnum">2</font></a>
+				<a href="#">map <font class="tagnum">6</font></a>
+				<a href="#">mobile <font class="tagnum">3</font></a>
+				<a href="#">network <font class="tagnum">2</font></a>
+				<a href="#">system <font class="tagnum">2</font></a>
+				<a href="#">urban <font class="tagnum">4</font></a>
+				<a href="#">visualization <font class="tagnum">3</font></a>
+				<a href="#">web <font class="tagnum">2</font></a>
+				<div style="float:left; height:90px; clear: both;"></div>
+			</div>
+			<div id="mainmenu">
+				<a href="/">Home</a>
+				<a href="http://datadreamer.com/blog">Blog</a>
+				<a href="http://datadreamer.com/about">About</a>
+				<a href="http://datadreamer.com/contact">Contact</a>
+			</div>
+		</div>
+			
+		<!-- ENTRIES CONTAINS BLOG ENTRIES -->
+
+		<div id="entries">
+
+			<style>
+				#entry1 a{color:rgb(0, 150, 255);}
+				#entry1 .end{color:rgb(0, 150, 255);line-height:1em;}
+			</style>
+
+			<div class="entry" id="entry1">
+				<div class="entrytitle" style="background-color: rgba(0, 150, 255, 0.7);">
+					<div class="entrytitletext">
+						A Return to Self-Publishing: The Owner Operated Platform, The Algorithm and Feed Culture.
+					</div>
+					<div class="entrydate">
+						January 13th, 2015
+					</div>
+					<div class="entrytitleimg" style="background-image:url('_img/printingpress.jpg');"></div>
+				</div>
+				<div class="entrybody" style="a{color: rgba(0, 150, 255, 0.7);}">
+					<p>
+						I got the sudden urge earlier this month to reboot this long abandoned blog that I had been hosting on my web site for several years. I’ve been wanting to do more writing lately as a way to help formulate my thoughts regarding my projects (and consequentially do more reading). I’ve already been doing a bit of writing over the past year on the <a href="http://urbancodes.tumblr.com">Urban Codes blog</a>, but I felt that it would be appropriate to construct a blog that I host myself. I didn’t do this because I wanted to restore the archive of posts from years ago, but rather because I have increasingly become disappointed with the role of large social media platforms and disturbed by our overwhelming reliance on them for publishing and consumption of content.
+					</p>
+					<p>
+						In the past I used this blog to post weekly documentation of my experience in grad school at the <a href="http://dma.ucla.edu">Design | Media Arts</a> program at UCLA, and later my experience as a research fellow at the <a href="http://jpl.nasa.gov">NASA Jet Propulsion Laboratory</a>. It was a collection of thoughts based on the work I was creating, books I was reading, and art I was seeing. It became more of a personal journal for me to look back upon and reflect upon the research I was doing. It certainly wasn’t written for the enjoyment or edification of others. I lost interest and eventually took it offline, opting to push visitors of my web site to Facebook and Google+ with the promise they would receive more up-to-date information on my activities. I chose to dovetail the hosting responsibilities of my content across multiple platforms for a number of popular reasons...
+					</p>
+					<p>
+						<b>1. I made my content consumable.</b> I began to break my content down into more easily consumable bits, which also allowed me to stagger posts, making it appear as if I had more. This is social media marketing 101 stuff. This also increases the number of impressions the content receives, which amplifies the brand and increases potential interactions which feed back into The Algorithm, which I will expand upon later.
+					</p>
+					<p>
+						<b>2. I was enticed by followers.</b> Social media platforms promote the ability to reach an audience through subscribers and the network effect. One begins by pushing little bits of content out and trying to gain subscribers. The more subscribers, the more people automatically see one’s content when it gets pushed out. When subscribers share content to their individual networks, the reach increases exponentially, and it all gets pushed into The Feed.
+					</p>
+					<p>
+						<b>3. The Feed brought content to viewers instead of viewers to content.</b> The Feed is any system that aggregates content for viewers, and when a viewer chooses to subscribe to a bit of content they will receive anything from that creator in their feed. Content creators literally push content to their audience when they choose rather than relying on the audience to remember to consume.
+					</p>
+					<p>
+						All of this seemed great and even revolutionary 6 years or so ago when I decided to abandon this blog and make the internal declaration that the personal blog is dead and that social media has taken its place. The homepage and the blog have been replaced by the profile and the feed. And who really needs to write a whole LiveJournal post when you can just summarise your feelings in 140 characters?
+					</p>
+
+					<img src="_img/printingpress2.jpg">
+
+					<p class="caption">
+						“Behold! My latest status update.” <a href="http://en.wikipedia.org/wiki/Letterpress_printing#mediaviewer/File:The_Caxton_Celebration_-_William_Caxton_showing_specimens_of_his_printing_to_King_Edward_IV_and_his_Queen.jpg">The Caxton Celebration. <i>The Graphic</i>, June 30, 1877, p. 617.</a>
+					</p>
+
+					<p>
+						For a sizable portion of the population this is actually empowering and advancing their use of technology. As the technical knowledge required to publish and communicate over the internet decreased, the number of people to which it became accessible increased. Platforms for communication and publishing gained more importance among users to the point where services filled the killer app category coveted by software developers years before. In fact, the platforms often define the internet in the mind of the user as it is the lens through which they experience the technology. This certainly isn’t new. Let’s go back.
+					</p>
+					<p>
+						I received my first dose of the internet (or The Internet as it was called in those days) back in 1994. At the time AOL was the internet service provider to have for the general public. AOL was not just providing you with a dial up connection from which to use an e-mail client or browse the world wide web, but rather with <a href="http://en.wikipedia.org/wiki/Closed_platform">an entire platform for family friendly content and communication utilities</a>. Entirely built in to the platform was your web, email, news, chat, and gaming experience. National competitors at the time such as Compuserve or Prodigy offered similar platforms and even got to market earlier, but didn’t market their services  nearly as successfully. Local ISP’s offered you a simple dial-up plan, e-mail and web hosting, without the frills of some fancy platform to consume content through. That lack of a platform layer to ease the user experience increased the learning curve for many. Anyone remember Trumpet Winsock?
+					</p>
+					<p>
+						Fortunately when my experience with the internet began, using a local ISP with a flat-rate plan and zero frills, there were already platforms to ease my introduction. Upon the advice of my cousin I registered for a Tripod account, which got me 500kb of web storage and access to their html based chat rooms. There I learned simple HTML to change the color of my text, post images, and generally annoy people with blink tags and <a href="_img/skull.gif">gifs of rotating 3d skulls</a>. If Tripod or similar services weren’t around I would have had to set up my own web server, which is another layer of technical knowledge required before I would be able to get to the point of learning markup. In that way Tripod, Geocities and Angelfire helped enable the first wave of user created content for the world wide web.
+					</p>
+					<p>
+						When MySpace was developed it simplified the personal home page, modeled the types of data people shared (movies, music, books, food), and created the first simple social network of friends. Again, this lowered the difficulty of entry as it prompted people with what content they should be sharing and with who the audience is for that content. Myspace also enabled just enough visual personalization to those with more technical knowledge to retain the colorful and diverse nature of a Geocities community &mdash; custom animated cursors and all.
+					</p>
+					<p>
+						I would also argue that MySpace first truly exhibited the network effect on a grand scale. The network effect is what draws people in to become users for fear that they are missing out on something the rest of their personal network is enjoying, or at least missing out on what the cool people are enjoying. Also, once a network has been established it becomes more difficult for a member to break away, as evidenced by any time a rival social media platform manifests out of nowhere.
+					</p>
+					<p>
+						What Facebook offered people in terms of a homepage were two major factors; clarity of design and exclusivity of network. Catering to a more mature, and obviously educated demographic, Facebook abandoned personalization of appearance in profiles focusing more on the content people could provide through their interests and personality. The exclusivity it created from it’s intentionally and strategically limited release over time in select universities created a demand for the product which amplified the network effect substantially. If you want to make people want something, tell them they can’t have it.
+					</p>
+					<p>
+						After Facebook’s blitzkrieg introduction to the market, it relaxed restrictions and opened up to everyone’s grandparents. After all, it is the perfect closed platform for people with a low technical proficiency and varying desires for internet services. By the time Facebook opened to the public it had picked up on every other trend coming out of social media and quickly implemented the functionality into it’s services. When Facebook decided to grow beyond being people’s profile page, it clearly gained inspiration from Twitter in what would become the Status Update and The Wall. As mobile use increased and geolocation became a valuable data point for generating interactions between users, they looked to FourSquare and were inspired to create check-ins. When sending direct messages to people’s friends wasn’t sufficient, they implemented a real-time chat in the browser, an IM client for mobile devices, and an audio and video call service across multiple platforms. I’m not accusing Facebook of being unoriginal, and I don’t blame them for implementing functionality that is popular in other services, but it is worth pointing out that a multi-faceted ecosystem of services within a closed platform is exactly what Facebook established, and is a major factor in why it’s user base has grown strong and stays strong.
+					</p>
+					<p>
+						Of course Google has done the exact same thing, but they didn’t establish themselves as a social network first. Google developed an entire suite of products, using simplistic interfaces and minimal advertising content, and offered it to users for free for over a decade before they decided to build their own social network. The primary motivation behind its development was to integrate their products into a single user system that could accommodate the profile functionalities of Facebook and improve upon the user network and feed experience. However, even a company the size of Google couldn’t counter the network effect grip Facebook retained on users.
+					</p>
+					<p>
+						However it is the combination of the ecosystem of services and the network effect which creates a precarious scenario regarding the consolidation of content distribution as well as control over The Feed. As people become accustomed to the ecosystem they become complacent and reliant on The Feed. And why shouldn’t they? After all, The Feed is their customized aggregated collection of content specially designed for them, which is great, right? To understand The Feed better we must first attempt to understand The Algorithm.
+					</p>
+					<p>
+						Facebook’s wall is ordered using two different filters: Top Stories and Most Recent. Top Stories uses a combination of likes, comments and shares in addition to how recent the post was made in order to derive how highly ranked it is in your news feed. Activity is an indicator of popularity, which multiplied by how recent the content was posted will return a “hotness” ranking which is used to sort the material users see. The Most Recent filter simply organizes posts based on what has received activity most recently. This is why somebody’s vacation photos from months ago will pop up to the top of your feed when their aunt likes the album.
+					</p>
+					<p>
+						However a few years ago some changes to the algorithm were made. This coincided with the creation of pages specifically for organizations, businesses, artists, etc where the “friend” dynamic didn’t make sense but the “like” dynamic did. Pages now can pay money to increase their impressions in people’s news feeds, which essentially shuts out posts from pages that choose not to pay anything (or, you know, your friends). Alessandro Mininno outlines the influence The Algorithm has over The Feed and what that means to the end user in <a href="http://vimeo.com/63227725">the talk he gave at Fabrica in 2013</a>.
+					</p>
+
+					<img src="_img/facebookpromote.jpg">
+
+					<p class="caption">
+						Dec. 10th 2012. “...promote this post to move it higher in friend’ news feeds…” The language used is specific to my account being a personal one, but applies the same to pages which have been “liked” in the past (or that you “follow” now). The more accounts one likes/follows, the more they must compete with each other for ones impressions.
+					</p>
+
+					<p>
+						The problem is not so much that this exists but rather that it’s not completely transparent to every end user. Even when one is aware of it, The Algorithm is not the easiest thing to understand. When The Algorithm is what determines what appears in The Feed, and The Feed is what people have faith in to deliver exactly what they want to see at that moment, then there arises ethical implications in the design of The Algorithm. Combine this with the closed-platform approach that consolidates consumption of media on the users behalf as well as the network effect which discourages them from leaving, an alarming scenario is established where control over information and perspective is up to the highest bidder.
+					</p>
+					<p>
+						So what if it was completely transparent? What if Facebook made every attempt to make it perfectly clear to every user how their content was being filtered? There would be no ethical issue... it would just be a shitty service. It’s essentially broken because it stopped having the end user experience as the primary objective, which was sacrificed in order to create channels for generating revenue. It’s actually quite sad for somebody like me, a software developer, who recognizes the strengths of a service by the characteristics of it’s algorithms.
+					</p>
+					<p>
+						“But Aaron, haven’t you worked for Facebook?” Why, yes I have, and I am happy I did. They are projects that I am proud of, and I worked with some really great talented people at Facebook to produce them, and I would be happy to create projects with them in the future. However, I do disagree with the decisions the company has made about the algorithm that drives the news feed, which fundamentally affects the user experience of their service. It is this type of systematic filtering and control over content that leads me to make some changes in my use of social media.
+					</p>
+					<p>
+						<b>1. Content belongs on my site.</b> Projects, images, writing should all exist on my personal platform. I could use a platform like Tumblr, which I have in the past, but I still feel stifled by the types of media I can add (so what if I want a full bleed parallax canvas element, let me do it). All long form content on other platforms will be moved to my own site.
+					</p>
+					<p>
+						<b>2. Tiny content gets tweeted.</b> As far as I know Twitter’s feed filter hasn’t changed since it was established, and everyone gets content from users they follow as it’s created. Content is limited, so it’s an outlet for simple ideas or sharing links to articles I enjoy or original content I have created. It is both an aggregator of platforms and host to short-form content.
+					</p>
+					<p>
+						<b>3. Leave likes, comments, and karma to social media.</b> I have not implemented a comment system on this blog and I currently have no desire to do so. I have added social media sharing buttons but not tracking likes or usage. Anything content related should drive traffic to the site, but discussion and critique will be relegated to external social media platforms.
+					</p>
+					<p>
+						<b>4. My Facebook account will gradually become my Google+ account.</b> Without full confidence that my audience is receiving my content, my motivation to use the service decreases. I make art, and I have no intention to pay to promote my artwork, so to attempt to exist in an ecosystem where paid promotion trumps organically generated traffic makes no sense. My personal Facebook account will continue to be a way to keep in touch with a limited circle of family and friends, but my Facebook artist page and G+ account will transform into simple aggregators of content linking to other platforms. Their sole purpose is to push traffic to platforms hosting original content.
+					</p>
+					<p>
+						My goal over the course of the next year is to reshape my use of social media platforms and gradually transform the outcome to something more meaningful and designed to take advantage of the specific strengths of weaknesses of each platform. The ultimate objective is to regain control over my content and it’s distribution, and doing so means relying less on third party platforms. <font class="end">&#8718;</font>
+					</p>
+				</div>
+				<div class="tags">
+					<a href="/blog/tag/code">code</a>,
+					<a href="/blog/tag/networks">networks</a>,
+					<a href="/blog/tag/publishing">publishing</a>,
+					<a href="/blog/tag/socialmedia">socialmedia</a>,
+					<a href="/blog/tag/web">web</a>,
+					<a href="/blog/tag/writing">writing</a>
+				</div>
+				<div class="share">
+					<div class="sharebutton">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE"><img src="_img/share_facebook.png"></a>
+					</div>
+					<div class="sharebutton">
+						<a href="http://twitter.com/share?text=YOUR_URL_AND_TEXT_HERE&url=YOUR_URL_HERE"><img src="_img/share_twitter.png">
+						</div>
+					<div class="sharebutton">
+						<a href="https://plus.google.com/share?url=YOUR_URL_HERE"><img src="_img/share_gplus.png">
+						</div>
+					<div class="sharebutton">
+						<a href="YOUR_URL_HERE"><img src="_img/share_link.png"></a>
+					</div>
+				</div>
+			</div>
+
+			<style>
+				#entry2 a{color:rgb(0, 255, 0);}
+				#entry2 .end{color:rgb(0, 255, 0);line-height:1em;}
+			</style>
+
+			<div class="entry" id="entry2">
+				<div class="entrytitle" style="background-color: rgba(0, 255, 0, 0.7);">
+					<div class="entrytitletext">
+						The title is what you see first, but read the fucking article.
+					</div>
+					<div class="entrydate">
+						January 2, 2015
+					</div>
+					<div class="entrytitleimg" style="background-image:url('_img/amsterdam.jpg');"></div>
+				</div>
+				<div class="entrybody">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a venenatis dolor, ut bibendum arcu. Suspendisse et justo id neque aliquet vestibulum. Phasellus eget odio condimentum, bibendum ante accumsan, scelerisque nulla. Aliquam nisi ligula, maximus eu ullamcorper id, luctus a erat. Nam semper, justo sit amet porttitor fermentum, urna velit imperdiet nunc, in convallis turpis tortor eu nisl. Nulla eget erat lorem.
+					</p>
+					<p>
+						Pellentesque nec interdum enim. Nullam facilisis at nunc ut varius. Donec finibus nulla sit amet iaculis tincidunt. Vestibulum euismod ante nec porta faucibus. Quisque id maximus urna. Sed sagittis malesuada est quis malesuada. Pellentesque neque ipsum, varius at euismod in, bibendum in urna. Cras laoreet lorem leo. Curabitur a posuere neque.</br>
+					</p>
+					<p>
+						Quisque interdum tempor malesuada. Duis id est a urna luctus accumsan. Nulla ornare justo quis suscipit consectetur. Pellentesque ultricies risus non gravida tincidunt. Etiam condimentum urna justo, eget rhoncus ex gravida vel. Ut vel dignissim ipsum, in lobortis eros. Cras id malesuada elit, sed finibus est. Quisque mi neque, accumsan vitae orci malesuada, vehicula volutpat quam. Praesent ac arcu sapien. Morbi blandit et leo quis dictum. Proin pulvinar ante a orci cursus efficitur. Integer a consectetur ipsum. Integer ultrices mollis nibh, id gravida ex.<br/>
+					</p>
+
+					<img src="_img/amsterdam2.jpg">
+
+					<p class="caption">A couple dudes in a boat enjoying the brief sunshine that comes through dense clouds in August. (Source: datadreamer, August 19th, 2012)</p>
+
+					<p>
+						Fusce eu diam vehicula, aliquam neque eu, pharetra nibh. Aliquam erat volutpat. Quisque nec commodo massa, quis semper enim. Etiam vehicula libero risus, ut pharetra sapien accumsan vitae. In tincidunt molestie erat vitae placerat. Fusce elit massa, rhoncus quis blandit at, tincidunt nec lectus. Quisque ex orci, vehicula non auctor nec, suscipit non turpis. Pellentesque vulputate eleifend elit. Quisque condimentum justo arcu, in iaculis est ullamcorper id. In hac habitasse platea dictumst. Mauris vestibulum ante euismod feugiat tempor.
+					</p>
+					<p>
+						Nullam tristique facilisis ligula, a dignissim nisl hendrerit a. Fusce lobortis sollicitudin euismod. Aliquam condimentum dignissim sem a rhoncus. Nulla id massa vel ligula ornare ultricies. Proin condimentum magna id leo maximus semper. Etiam id commodo libero, sed congue odio. Vivamus eu scelerisque lorem. <font class="end">&#8718;</font>
+					</p>
+				</div>
+				<div class="tags">
+					<a href="/blog/tag/code">code</a>,
+					<a href="/blog/tag/networks">networks</a>,
+					<a href="/blog/tag/publishing">publishing</a>,
+					<a href="/blog/tag/socialmedia">socialmedia</a>,
+					<a href="/blog/tag/web">web</a>,
+					<a href="/blog/tag/writing">writing</a>
+				</div>
+				<div class="share">
+					<div class="sharebutton">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE"><img src="_img/share_facebook.png"></a>
+					</div>
+					<div class="sharebutton">
+						<a href="http://twitter.com/share?text=YOUR_URL_AND_TEXT_HERE&url=YOUR_URL_HERE"><img src="_img/share_twitter.png">
+						</div>
+					<div class="sharebutton">
+						<a href="https://plus.google.com/share?url=YOUR_URL_HERE"><img src="_img/share_gplus.png">
+						</div>
+					<div class="sharebutton">
+						<a href="YOUR_URL_HERE"><img src="_img/share_link.png"></a>
+					</div>
+				</div>
+			</div>
+
+			<style>
+				#entry3 a{color:rgb(204, 204, 0);}
+				#entry3 .end{color:rgb(204, 204, 0);line-height:1em;}
+			</style>
+
+			<div class="entry" id="entry3">
+				<div class="entrytitle" style="background-color: rgba(204, 204, 0, 0.7);">
+					<div class="entrytitletext">
+						Data visualization and modernism; exploring the role of abstraction.
+					</div>
+					<div class="entrydate">
+						January 2, 2015
+					</div>
+					<div class="entrytitleimg" style="background-image:url('_img/kandinsky.jpg');"></div>
+				</div>
+				<div class="entrybody">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a venenatis dolor, ut bibendum arcu. Suspendisse et justo id neque aliquet vestibulum. Phasellus eget odio condimentum, bibendum ante accumsan, scelerisque nulla. Aliquam nisi ligula, maximus eu ullamcorper id, luctus a erat. Nam semper, justo sit amet porttitor fermentum, urna velit imperdiet nunc, in convallis turpis tortor eu nisl. Nulla eget erat lorem.
+					</p>
+					<p>
+						Pellentesque nec interdum enim. Nullam facilisis at nunc ut varius. Donec finibus nulla sit amet iaculis tincidunt. Vestibulum euismod ante nec porta faucibus. Quisque id maximus urna. Sed sagittis malesuada est quis malesuada. Pellentesque neque ipsum, varius at euismod in, bibendum in urna. Cras laoreet lorem leo. Curabitur a posuere neque.</br>
+					</p>
+					<p>
+						Quisque interdum tempor malesuada. Duis id est a urna luctus accumsan. Nulla ornare justo quis suscipit consectetur. Pellentesque ultricies risus non gravida tincidunt. Etiam condimentum urna justo, eget rhoncus ex gravida vel. Ut vel dignissim ipsum, in lobortis eros. Cras id malesuada elit, sed finibus est. Quisque mi neque, accumsan vitae orci malesuada, vehicula volutpat quam. Praesent ac arcu sapien. Morbi blandit et leo quis dictum. Proin pulvinar ante a orci cursus efficitur. Integer a consectetur ipsum. Integer ultrices mollis nibh, id gravida ex.<br/>
+					</p>
+					<p>
+						Fusce eu diam vehicula, aliquam neque eu, pharetra nibh. Aliquam erat volutpat. Quisque nec commodo massa, quis semper enim. Etiam vehicula libero risus, ut pharetra sapien accumsan vitae. In tincidunt molestie erat vitae placerat. Fusce elit massa, rhoncus quis blandit at, tincidunt nec lectus. Quisque ex orci, vehicula non auctor nec, suscipit non turpis. Pellentesque vulputate eleifend elit. Quisque condimentum justo arcu, in iaculis est ullamcorper id. In hac habitasse platea dictumst. Mauris vestibulum ante euismod feugiat tempor.
+					</p>
+					<p>
+						Nullam tristique facilisis ligula, a dignissim nisl hendrerit a. Fusce lobortis sollicitudin euismod. Aliquam condimentum dignissim sem a rhoncus. Nulla id massa vel ligula ornare ultricies. Proin condimentum magna id leo maximus semper. Etiam id commodo libero, sed congue odio. Vivamus eu scelerisque lorem. <font class="end">&#8718;</font>
+					</p>
+				</div>
+				<div class="tags">
+					<a href="/blog/tag/code">code</a>,
+					<a href="/blog/tag/networks">networks</a>,
+					<a href="/blog/tag/publishing">publishing</a>,
+					<a href="/blog/tag/socialmedia">socialmedia</a>,
+					<a href="/blog/tag/web">web</a>,
+					<a href="/blog/tag/writing">writing</a>
+				</div>
+				<div class="share">
+					<div class="sharebutton">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE"><img src="_img/share_facebook.png"></a>
+					</div>
+					<div class="sharebutton">
+						<a href="http://twitter.com/share?text=YOUR_URL_AND_TEXT_HERE&url=YOUR_URL_HERE"><img src="_img/share_twitter.png">
+						</div>
+					<div class="sharebutton">
+						<a href="https://plus.google.com/share?url=YOUR_URL_HERE"><img src="_img/share_gplus.png">
+						</div>
+					<div class="sharebutton">
+						<a href="YOUR_URL_HERE"><img src="_img/share_link.png"></a>
+					</div>
+				</div>
+			</div>
+
+			<style>
+				#entry4 a{color:rgb(255, 120, 0);}
+				#entry4 .end{color:rgb(255, 120, 0);line-height:1em;}
+			</style>
+
+			<div class="entry" id="entry4">
+				<div class="entrytitle" style="background-color: rgba(255, 120, 0, 0.7);">
+					<div class="entrytitletext">
+						Data visualization and modernism; exploring the role of abstraction.
+					</div>
+					<div class="entrydate">
+						January 2, 2015
+					</div>
+					<div class="entrytitleimg" style="background-image:url('_img/kandinsky.jpg');"></div>
+				</div>
+				<div class="entrybody">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a venenatis dolor, ut bibendum arcu. Suspendisse et justo id neque aliquet vestibulum. Phasellus eget odio condimentum, bibendum ante accumsan, scelerisque nulla. Aliquam nisi ligula, maximus eu ullamcorper id, luctus a erat. Nam semper, justo sit amet porttitor fermentum, urna velit imperdiet nunc, in convallis turpis tortor eu nisl. Nulla eget erat lorem.
+					</p>
+					<p>
+						Pellentesque nec interdum enim. Nullam facilisis at nunc ut varius. Donec finibus nulla sit amet iaculis tincidunt. Vestibulum euismod ante nec porta faucibus. Quisque id maximus urna. Sed sagittis malesuada est quis malesuada. Pellentesque neque ipsum, varius at euismod in, bibendum in urna. Cras laoreet lorem leo. Curabitur a posuere neque.</br>
+					</p>
+					<p>
+						Quisque interdum tempor malesuada. Duis id est a urna luctus accumsan. Nulla ornare justo quis suscipit consectetur. Pellentesque ultricies risus non gravida tincidunt. Etiam condimentum urna justo, eget rhoncus ex gravida vel. Ut vel dignissim ipsum, in lobortis eros. Cras id malesuada elit, sed finibus est. Quisque mi neque, accumsan vitae orci malesuada, vehicula volutpat quam. Praesent ac arcu sapien. Morbi blandit et leo quis dictum. Proin pulvinar ante a orci cursus efficitur. Integer a consectetur ipsum. Integer ultrices mollis nibh, id gravida ex.<br/>
+					</p>
+					<p>
+						Fusce eu diam vehicula, aliquam neque eu, pharetra nibh. Aliquam erat volutpat. Quisque nec commodo massa, quis semper enim. Etiam vehicula libero risus, ut pharetra sapien accumsan vitae. In tincidunt molestie erat vitae placerat. Fusce elit massa, rhoncus quis blandit at, tincidunt nec lectus. Quisque ex orci, vehicula non auctor nec, suscipit non turpis. Pellentesque vulputate eleifend elit. Quisque condimentum justo arcu, in iaculis est ullamcorper id. In hac habitasse platea dictumst. Mauris vestibulum ante euismod feugiat tempor.
+					</p>
+					<p>
+						Nullam tristique facilisis ligula, a dignissim nisl hendrerit a. Fusce lobortis sollicitudin euismod. Aliquam condimentum dignissim sem a rhoncus. Nulla id massa vel ligula ornare ultricies. Proin condimentum magna id leo maximus semper. Etiam id commodo libero, sed congue odio. Vivamus eu scelerisque lorem. <font class="end">&#8718;</font>
+					</p>
+				</div>
+				<div class="tags">
+					<a href="/blog/tag/code">code</a>,
+					<a href="/blog/tag/networks">networks</a>,
+					<a href="/blog/tag/publishing">publishing</a>,
+					<a href="/blog/tag/socialmedia">socialmedia</a>,
+					<a href="/blog/tag/web">web</a>,
+					<a href="/blog/tag/writing">writing</a>
+				</div>
+				<div class="share">
+					<div class="sharebutton">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE"><img src="_img/share_facebook.png"></a>
+					</div>
+					<div class="sharebutton">
+						<a href="http://twitter.com/share?text=YOUR_URL_AND_TEXT_HERE&url=YOUR_URL_HERE"><img src="_img/share_twitter.png">
+						</div>
+					<div class="sharebutton">
+						<a href="https://plus.google.com/share?url=YOUR_URL_HERE"><img src="_img/share_gplus.png">
+						</div>
+					<div class="sharebutton">
+						<a href="YOUR_URL_HERE"><img src="_img/share_link.png"></a>
+					</div>
+				</div>
+			</div>
+
+			<style>
+				#entry5 a{color:rgb(255, 0, 0);}
+				#entry5 .end{color:rgb(255, 0, 0);line-height:1em;}
+			</style>
+
+			<div class="entry" id="entry5">
+				<div class="entrytitle" style="background-color: rgba(255, 0, 0, 0.7);">
+					<div class="entrytitletext">
+						Data visualization and modernism; exploring the role of abstraction.
+					</div>
+					<div class="entrydate">
+						January 2, 2015
+					</div>
+					<div class="entrytitleimg" style="background-image:url('_img/kandinsky.jpg');"></div>
+				</div>
+				<div class="entrybody">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a venenatis dolor, ut bibendum arcu. Suspendisse et justo id neque aliquet vestibulum. Phasellus eget odio condimentum, bibendum ante accumsan, scelerisque nulla. Aliquam nisi ligula, maximus eu ullamcorper id, luctus a erat. Nam semper, justo sit amet porttitor fermentum, urna velit imperdiet nunc, in convallis turpis tortor eu nisl. Nulla eget erat lorem.
+					</p>
+					<p>
+						Pellentesque nec interdum enim. Nullam facilisis at nunc ut varius. Donec finibus nulla sit amet iaculis tincidunt. Vestibulum euismod ante nec porta faucibus. Quisque id maximus urna. Sed sagittis malesuada est quis malesuada. Pellentesque neque ipsum, varius at euismod in, bibendum in urna. Cras laoreet lorem leo. Curabitur a posuere neque.</br>
+					</p>
+					<p>
+						Quisque interdum tempor malesuada. Duis id est a urna luctus accumsan. Nulla ornare justo quis suscipit consectetur. Pellentesque ultricies risus non gravida tincidunt. Etiam condimentum urna justo, eget rhoncus ex gravida vel. Ut vel dignissim ipsum, in lobortis eros. Cras id malesuada elit, sed finibus est. Quisque mi neque, accumsan vitae orci malesuada, vehicula volutpat quam. Praesent ac arcu sapien. Morbi blandit et leo quis dictum. Proin pulvinar ante a orci cursus efficitur. Integer a consectetur ipsum. Integer ultrices mollis nibh, id gravida ex.<br/>
+					</p>
+					<p>
+						Fusce eu diam vehicula, aliquam neque eu, pharetra nibh. Aliquam erat volutpat. Quisque nec commodo massa, quis semper enim. Etiam vehicula libero risus, ut pharetra sapien accumsan vitae. In tincidunt molestie erat vitae placerat. Fusce elit massa, rhoncus quis blandit at, tincidunt nec lectus. Quisque ex orci, vehicula non auctor nec, suscipit non turpis. Pellentesque vulputate eleifend elit. Quisque condimentum justo arcu, in iaculis est ullamcorper id. In hac habitasse platea dictumst. Mauris vestibulum ante euismod feugiat tempor.
+					</p>
+					<p>
+						Nullam tristique facilisis ligula, a dignissim nisl hendrerit a. Fusce lobortis sollicitudin euismod. Aliquam condimentum dignissim sem a rhoncus. Nulla id massa vel ligula ornare ultricies. Proin condimentum magna id leo maximus semper. Etiam id commodo libero, sed congue odio. Vivamus eu scelerisque lorem. <font class="end">&#8718;</font>
+					</p>
+				</div>
+				<div class="tags">
+					<a href="/blog/tag/code">code</a>,
+					<a href="/blog/tag/networks">networks</a>,
+					<a href="/blog/tag/publishing">publishing</a>,
+					<a href="/blog/tag/socialmedia">socialmedia</a>,
+					<a href="/blog/tag/web">web</a>,
+					<a href="/blog/tag/writing">writing</a>
+				</div>
+				<div class="share">
+					<div class="sharebutton">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE"><img src="_img/share_facebook.png"></a>
+					</div>
+					<div class="sharebutton">
+						<a href="http://twitter.com/share?text=YOUR_URL_AND_TEXT_HERE&url=YOUR_URL_HERE"><img src="_img/share_twitter.png">
+						</div>
+					<div class="sharebutton">
+						<a href="https://plus.google.com/share?url=YOUR_URL_HERE"><img src="_img/share_gplus.png">
+						</div>
+					<div class="sharebutton">
+						<a href="YOUR_URL_HERE"><img src="_img/share_link.png"></a>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+    
+	</body>
+
+	<script>
+		jQuery(".entrytitletext").fitText(1.4, { minFontSize: '18px', maxFontSize: '140px' });
+	</script>
+</html>

@@ -272,6 +272,31 @@ a.logo{
 	text-decoration:none;	
 }
 
+/* CONTACT FORM STYLES */
+
+input[type=text],
+input[type=email],
+textarea {
+	width: 270px;
+	margin: 7px 10px 7px 10px;
+  	border: 0px;
+  	padding: 5px;
+  	font-family: 'DINLightRegular';
+	font-size: 14px;
+	color: #aaaaaa;
+	background-color:#333333;
+}
+input[type=submit]{
+	margin: 10px;
+  	font-family: 'DINLightRegular';
+	font-size: 14px;
+	color: #fff;
+	background-color:#333;
+	border: 1px solid #666;
+}
+#captcha{
+	margin: 7px 10px 7px 10px;
+}
 
 
 
@@ -326,6 +351,9 @@ a.logo{
 	#videoframe{
 		width: 590px;
 	}
+	textarea {
+		width: 580px;
+	}
 }
 
 @media only screen and (min-width: 960px) {		/* three */
@@ -376,6 +404,9 @@ a.logo{
 	#videoframe{
 		width: 900px;
 	}
+	textarea {
+		width: 590px;
+	}
 }
 
 @media only screen and (min-width: 1280px) {	/* four */
@@ -420,6 +451,9 @@ a.logo{
 	#videoframe{
 		width: 1210px;
 	}
+	textarea {
+		width: 900px;
+	}
 }
 
 @media only screen and (min-width: 1600px) {	/* five */
@@ -463,6 +497,9 @@ a.logo{
 	}
 	#videoframe{
 		width: 1520px;
+	}
+	textarea {
+		width: 1210px;
 	}
 }
 

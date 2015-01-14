@@ -1,0 +1,193 @@
+<?php
+	// connect to db
+	$db = mysql_connect("localhost", "asiegel_web", "buttslol!") or die("Failed to connect to server.");
+	mysql_select_db("asiegel_blog") or die("Failed to select database.");
+?>
+
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <?php
+        	// get article title if linking directly
+        	if(!empty($_GET['link'])){
+				$linkname = mysql_escape_string($_GET['link']);
+				$result = mysql_query("SELECT * FROM posts WHERE link = '{$linkname}'");
+				$row = mysql_fetch_assoc($result);
+				$title = $row["title"];
+				echo "<title>{$title} - datadreamer blog</title>";
+			} else {
+				echo "<title>datadreamer blog</title>";
+			}
+		?>
+		<meta name="description" content="Explorations of data, systems, interactions, and environments.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../_css/normalize.min.css">
+		<link rel="stylesheet" href="../_css/fonts.css" />
+		<link rel="stylesheet" href="_css/site.css" />
+
+		<script src="../_js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="../_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		<script src="../_js/jquery.fittext.js"></script>
+		<script src="_js/menu.js"></script>
+	</head>
+	
+	<body>
+
+		<?php
+			include_once("../analyticstracking.php");
+		?>
+
+		<!-- HEADER -->
+		
+		<div id="header" class="noselect">
+			<div id="logo">
+				<a class="logo" href="/">datadreamer</a>
+			</div>
+			<div id="menubutton">
+				<a href="javascript:toggleMenu();"><img src="_img/menubutton.png"></a>
+			</div>
+			<div id="sublogo">
+				THE WORK OF <a class="sublogo" href="/about">AARON SIEGEL</a>
+			</div>
+		</div>
+
+		<!-- MENU -->
+
+		<div id="menu" class="noselect">
+			<hr>
+
+			<!-- menu titles -->
+
+			<div id="menutitles">
+				<div class="menutitle">
+					<div class="menutitletext">
+						Posts
+					</div>
+				</div>
+				<div class="menutitle" id="tagmenutitle">
+					<div class="menutitletext">
+						Tags
+					</div>
+				</div>
+				<div class="menutitle" style="border-right: none; width: 33%;">
+					<div class="menutitletext">
+						Menu
+					</div>
+				</div>
+			</div>
+
+			<!-- posts -->
+
+			<div id="postmenu">
+				<?php
+					// list all blog posts as buttons to open permalinks.
+					$result = mysql_query("SELECT title,link,r,g,b FROM posts ORDER BY id DESC");
+					while($row = mysql_fetch_assoc($result)){
+						$title = $row['title'];
+						$link = $row['link'];
+						$r = $row['r'];
+						$g = $row['g'];
+						$b = $row['b'];
+						echo "<div class='postmenuitem'><a href='http://www.datadreamer.com/blog/{$link}' style='color:rgb({$r},{$g},{$b});'>{$title}</a></div>";
+					}
+				?>
+			</div>
+
+			<!-- tags -->
+
+			<div id="tagmenu">
+				<?php
+					// list all tags as buttons to open list of relavent posts.
+					$result = mysql_query("SELECT tag, count(tag) AS num FROM tags GROUP BY tag ORDER BY tag ASC");
+					while($row = mysql_fetch_assoc($result)){
+						$tag = $row['tag'];
+						$num = $row['num'];
+						echo "<a href='/blog/tag/{$tag}'>{$tag} <font class='tagnum'>{$num}</font></a>";
+					}
+				?>
+			</div>
+
+			<!-- main menu -->
+
+			<div id="mainmenu">
+				<a href="/">Home</a>
+				<a href="http://datadreamer.com/blog">Blog</a>
+				<a href="http://datadreamer.com/about">About</a>
+				<a href="http://datadreamer.com/contact">Contact</a>
+			</div>
+		</div>
+
+		<!-- BLOG ENTRIES -->
+
+		<div id="entries">
+			<?php
+				// output blog posts.
+				if(!empty($_GET['link'])){
+					$linkname = mysql_escape_string($_GET['link']);
+					$result = mysql_query("SELECT * FROM posts WHERE link = '{$linkname}'");
+				} else {
+					$result = mysql_query("SELECT * FROM posts ORDER BY id DESC LIMIT 1");
+				}
+				while($row = mysql_fetch_assoc($result)){
+					$id = $row['id'];
+					$title = $row['title'];
+					$link = $row['link'];
+					$titleimg = $row['titleimg'];
+					$date = date('F jS, Y',strtotime($row['dt']));
+					$body = $row['body'];
+					$r = $row['r'];
+					$g = $row['g'];
+					$b = $row['b'];
+					// entry specific colors
+					echo "<style>";
+					echo "#entry{$id} a{color:rgb($r, $g, $b);}";
+					echo "#entry{$id} .end{color:rgb($r, $g, $b);line-height:1em;}";
+					echo "</style>";
+					echo "<div class='entry' id='entry{$id}'>";
+					// entry title block
+					echo "<div class='entrytitle' style='background-color: rgba({$r}, {$g}, {$b}, 0.7);'>";
+					echo "<div class='entrytitletext'>{$title}</div>";
+					echo "<div class='entrydate'>{$date}</div>";
+					echo "<div class='entrytitleimg' style='background-image:url(\"_img/{$titleimg}\");'></div>";
+					echo "</div>";
+					// entry body block
+					echo "<div class='entrybody'>{$body}</div>";
+					// entry tags block
+					echo "<div class='tags'>";
+					$tagresults = mysql_query("SELECT * FROM tags WHERE post_id = '{$id}'");
+					while($tagrow = mysql_fetch_assoc($tagresults)){
+						$tag = $tagrow['tag'];
+						echo "<a href='/blog/tag/{$tag}'>$tag</a>, ";
+					}
+					echo "</div>";
+					// entry social media sharing block
+					echo "<div class='share'>";
+					echo "<div class='sharebutton'>";
+					echo "<a href='http://www.facebook.com/sharer/sharer.php?u=http://www.datadreamer.com/blog/{$link}'><img src='_img/share_facebook.png'></a>";
+					echo "</div>";
+					echo "<div class='sharebutton'>";
+					echo "<a href='http://twitter.com/share?text={$title}&url=http://www.datadreamer.com/blog/{$link}'><img src='_img/share_twitter.png'>";
+					echo "</div>";
+					echo "<div class='sharebutton'>";
+					echo "<a href='https://plus.google.com/share?url=http://www.datadreamer.com/blog/{$link}'><img src='_img/share_gplus.png'>";
+					echo "</div>";
+					echo "<div class='sharebutton'>";
+					echo "<a href='{$link}'><img src='_img/share_link.png'></a>";
+					echo "</div>";
+					echo "</div>";
+					echo "</div>";
+				}
+			?>
+		</div>
+
+	</body>
+
+	<script>
+		jQuery(".entrytitletext").fitText(1.4, { minFontSize: '18px', maxFontSize: '140px' });
+	</script>
+
+</html>

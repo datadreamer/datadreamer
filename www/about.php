@@ -51,11 +51,11 @@
 			<div id="contenttext">
 				Aaron Siegel is a transdisciplinarian with a concentration in computational information design. He received his BFA in Digital Media Art from the <a href="http://cadre.sjsu.edu">Cadre Laboratory for New Media</a> at San Jose State University in 2006, and his MFA in <a href="http://dma.ucla.edu">Design|Media Art</a> from the University of California, Los Angeles in 2008.
 				<br/><br/>
-				His motivation comes from interesting data sets, interfaces, and social justice applications. He utilizes data visualization as a medium to explore complex systems, aiming to create aesthetic representations of data while fostering scientific empiricism. His work strives to display relationships and correlations within information systems that would remain unseen from any other perspective.
+				His motivation comes from interesting data sets, interfaces, and public spaces. He utilizes data visualization as a medium to explore complex systems, aiming to create aesthetic representations of data while fostering scientific empiricism. His work strives to display relationships and correlations within information systems that would remain unseen from any other perspective.
 				<br/><br/>
-				He has created work for various institutions including the <a href="http://jpl.nasa.gov">NASA Jet Propulsion Laboratory</a>, <a href="http://www.electroland.net">Electroland</a>, <a href="http://www.directedplay.com">Directed Play</a>, the <a href="http://senseable.mit.edu">MIT SENSEable City Laboratory</a> and <a href="http://www.facebook.com">Facebook</a>. He has exhibited work in Los Angeles, San Jose, San Francisco, Salt Lake City, Reno, Memphis, Indianapolis, Seattle, New York, Guadalajara, Madrid, Trieste, Heidelberg and Singapore.
+				He has created work for various institutions including the <a href="http://jpl.nasa.gov">NASA Jet Propulsion Laboratory</a>, <a href="http://www.electroland.net">Electroland</a>, <a href="http://www.directedplay.com">Directed Play</a>, the <a href="http://senseable.mit.edu">MIT SENSEable City Laboratory</a>, <a href="http://www.facebook.com">Facebook</a> and <a href="http://www.fabrica.it">Fabrica</a>. He has exhibited work in Los Angeles, San Jose, San Francisco, Salt Lake City, Reno, Memphis, Indianapolis, Seattle, New York, Guadalajara, Madrid, Trieste, Heidelberg, Singapore and Rome.
 				<br/><br/>
-				Aaron is currently the Head of Interaction and Online Experience at <a href="http://www.fabrica.it">Fabrica</a>.
+				<a href="/cv.pdf">Learn more</a> or <a href="/contact">contact</a>.
 			</div>
 		</div>
 			

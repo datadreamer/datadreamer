@@ -101,7 +101,11 @@ if(!empty($_GET['item'])){
 				
 				while($row = mysql_fetch_row($result)){
 					//print_r($row);
-					echo "<div class=\"item\" onclick=\"location.href='item.php?item={$row[0]}'\">";
+					if($row[0] == 56){
+						echo "<div class=\"item\" onclick=\"location.href='/about'\">";
+					} else {
+						echo "<div class=\"item\" onclick=\"location.href='item.php?item={$row[0]}'\">";
+					}
 				?>
 					
 						<?php echo "<img class='thumb' src='_images/" . $row[5] . "' />"; ?>
