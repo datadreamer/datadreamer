@@ -17,6 +17,9 @@
 				$row = mysql_fetch_assoc($result);
 				$title = $row["title"];
 				echo "<title>{$title} - datadreamer blog</title>";
+			} else if(!empty($_GET['tag'])){
+				$searchtag = mysql_escape_string($_GET['tag']);
+				echo "<title>{$searchtag} - datadreamer blog</title>";
 			} else {
 				echo "<title>datadreamer blog</title>";
 			}
@@ -25,14 +28,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="../_css/normalize.min.css">
-		<link rel="stylesheet" href="../_css/fonts.css" />
-		<link rel="stylesheet" href="_css/site.css" />
+		<link rel='stylesheet' href='/_css/normalize.min.css'>
+		<link rel='stylesheet' href='/_css/fonts.css' />
+		<link rel='stylesheet' href='/blog/_css/site.css' />
 
-		<script src="../_js/vendor/jquery-1.11.0.min.js"></script>
-        <script src="../_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-		<script src="../_js/jquery.fittext.js"></script>
-		<script src="_js/menu.js"></script>
+		<script src='/_js/vendor/jquery-1.11.0.min.js'></script>
+        <script src='/_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js'></script>
+		<script src='/_js/jquery.fittext.js'></script>
+		<script src='/blog/_js/menu.js'></script>
 	</head>
 	
 	<body>
@@ -48,7 +51,7 @@
 				<a class="logo" href="/">datadreamer</a>
 			</div>
 			<div id="menubutton">
-				<a href="javascript:toggleMenu();"><img src="_img/menubutton.png"></a>
+				<a href="javascript:toggleMenu();"><img src="/blog/_img/menubutton.png"></a>
 			</div>
 			<div id="sublogo">
 				THE WORK OF <a class="sublogo" href="/about">AARON SIEGEL</a>
@@ -129,6 +132,8 @@
 				if(!empty($_GET['link'])){
 					$linkname = mysql_escape_string($_GET['link']);
 					$result = mysql_query("SELECT * FROM posts WHERE link = '{$linkname}'");
+				} else if(!empty($_GET['tag'])){
+					$result = mysql_query("SELECT * FROM posts INNER JOIN tags ON posts.id = tags.post_id WHERE tags.tag = '{$searchtag}'");
 				} else {
 					$result = mysql_query("SELECT * FROM posts ORDER BY id DESC LIMIT 1");
 				}
@@ -167,16 +172,16 @@
 					// entry social media sharing block
 					echo "<div class='share'>";
 					echo "<div class='sharebutton'>";
-					echo "<a href='http://www.facebook.com/sharer/sharer.php?u=http://www.datadreamer.com/blog/{$link}'><img src='_img/share_facebook.png'></a>";
+					echo "<a href='http://www.facebook.com/sharer/sharer.php?u=http://www.datadreamer.com/blog/{$link}'><img src='/blog/_img/share_facebook.png'></a>";
 					echo "</div>";
 					echo "<div class='sharebutton'>";
-					echo "<a href='http://twitter.com/share?text={$title}&url=http://www.datadreamer.com/blog/{$link}'><img src='_img/share_twitter.png'>";
+					echo "<a href='http://twitter.com/share?text={$title}&url=http://www.datadreamer.com/blog/{$link}'><img src='/blog/_img/share_twitter.png'>";
 					echo "</div>";
 					echo "<div class='sharebutton'>";
-					echo "<a href='https://plus.google.com/share?url=http://www.datadreamer.com/blog/{$link}'><img src='_img/share_gplus.png'>";
+					echo "<a href='https://plus.google.com/share?url=http://www.datadreamer.com/blog/{$link}'><img src='/blog/_img/share_gplus.png'>";
 					echo "</div>";
 					echo "<div class='sharebutton'>";
-					echo "<a href='{$link}'><img src='_img/share_link.png'></a>";
+					echo "<a href='{$link}'><img src='/blog/_img/share_link.png'></a>";
 					echo "</div>";
 					echo "</div>";
 					echo "</div>";

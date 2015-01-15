@@ -200,10 +200,33 @@ div.entry{
 
 }
 
+div.entrypreview {
+	float: left;
+	width: 50%;
+	height: 200px;
+}
+
+div.entrypreviewdate{
+	margin-left: 10px;
+	padding-bottom: 10px;
+	font-family: 'DINMediumRegular';
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+div.entryabstract {
+	margin: 0 10px 0 10px;	
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #fff;
+	display: none;
+}
+
 div.entrytitle{
 	position: relative;
 	width: 100%;	
-	overflow: hidden;
+	height: 100%;
 }
 
 div.entrytitleimg{
@@ -223,7 +246,7 @@ div.entrytitleimg{
 }
 
 div.entrytitletext{
-	margin: 10px;
+	margin: 0 10px 10px 10px;
 	padding-top: 10px;
 	font-size: 36px;
 	font-family: 'DINMediumRegular';
@@ -318,6 +341,14 @@ div.sharebutton img{
 		display: block;
 		width: 33%;
 	}
+	/*
+	div.entrypreview {
+		width: 33.33%;
+	}
+	*/
+	div.entryabstract {
+		display: block;
+	}
 }
 
 @media only screen and (min-width: 720px) {
@@ -338,6 +369,10 @@ div.sharebutton img{
 		font-size: 50px;
 		padding: 5px 10px 5px 0;
 		height: 51px;
+	}
+	div.entrypreview {
+		width: 33.33%;
+		height: 250px;
 	}
 	div.entrydate{
 		font-size: 14px;
@@ -371,6 +406,9 @@ div.sharebutton img{
 		font-size: 80px;
 		padding: 5px 10px 5px 0;
 		height: 81px;
+	}
+	div.entrypreview {
+		width: 20%;
 	}
 	div.entrydate{
 		font-size: 18px;
@@ -436,6 +474,9 @@ div.sharebutton img{
 		font-size: 120px;
 		padding: 10px 10px 10px 0;
 		height: 121px;
+	}
+	div.entrypreview {
+		width: 16.66%;
 	}
 	div.entrydate{
 		font-size: 32px;
