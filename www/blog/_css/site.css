@@ -206,6 +206,10 @@ div.entrypreview {
 	height: 200px;
 }
 
+div.entrypreview a {
+	text-decoration: none;
+}
+
 div.entrypreviewdate{
 	margin-left: 10px;
 	padding-bottom: 10px;
