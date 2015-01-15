@@ -202,8 +202,8 @@ div.entry{
 
 div.entrypreview {
 	float: left;
-	width: 50%;
-	height: 200px;
+	width: 100%;
+	height: 250px;
 }
 
 div.entrypreview a {
@@ -224,7 +224,6 @@ div.entryabstract {
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	color: #fff;
-	display: none;
 }
 
 div.entrytitle{
@@ -345,13 +344,8 @@ div.sharebutton img{
 		display: block;
 		width: 33%;
 	}
-	/*
 	div.entrypreview {
-		width: 33.33%;
-	}
-	*/
-	div.entryabstract {
-		display: block;
+		width: 50%;
 	}
 }
 
@@ -376,7 +370,6 @@ div.sharebutton img{
 	}
 	div.entrypreview {
 		width: 33.33%;
-		height: 250px;
 	}
 	div.entrydate{
 		font-size: 14px;
