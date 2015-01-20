@@ -16,6 +16,17 @@
         <script src="../_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		<script src="../_js/jquery.fittext.js"></script>
 		<script src="_js/menu.js"></script>
+
+		<script>
+			$.fn.slideShow = function(timeOut) {
+				var $elem = this;
+				this.children().eq(0).appendTo(this).show();
+				intervalID = setInterval(function(){
+					$elem.children(":first").hide().appendTo($elem).fadeIn(1000);
+				}, timeOut || 4000);
+			};
+
+		</script>
 	</head>
 	
 	<body>
@@ -267,7 +278,22 @@
 						Quisque interdum tempor malesuada. Duis id est a urna luctus accumsan. Nulla ornare justo quis suscipit consectetur. Pellentesque ultricies risus non gravida tincidunt. Etiam condimentum urna justo, eget rhoncus ex gravida vel. Ut vel dignissim ipsum, in lobortis eros. Cras id malesuada elit, sed finibus est. Quisque mi neque, accumsan vitae orci malesuada, vehicula volutpat quam. Praesent ac arcu sapien. Morbi blandit et leo quis dictum. Proin pulvinar ante a orci cursus efficitur. Integer a consectetur ipsum. Integer ultrices mollis nibh, id gravida ex.<br/>
 					</p>
 
-					<img src="_img/amsterdam2.jpg">
+					<div class="slideshow" id="slideshow1" style="display: block;">
+						<img class="slide" src="http://www.datadreamer.com/_images/timelinehallway_1_900.jpg" width="100%" height="100%" style="display: block;">
+						<img class="slide" src="http://www.datadreamer.com/_images/timelinehallway_2_900.jpg" width="100%" height="100%" style="display: block;">
+						<img class="slide" src="http://www.datadreamer.com/_images/timelinehallway_3_900.jpg" width="100%" height="100%" style="display: block;">
+					</div>
+
+
+					<script>
+						$(window).load(function(){
+							$('#slideshow1').slideShow();
+							$('#slideshow1').height($('.slide').outerHeight());
+						});
+						$(window).resize(function(){
+							$('#slideshow1').height($('.slide').outerHeight());
+						});
+					</script>
 
 					<p class="caption">A couple dudes in a boat enjoying the brief sunshine that comes through dense clouds in August. (Source: datadreamer, August 19th, 2012)</p>
 
@@ -327,6 +353,35 @@
 					<p>
 						Quisque interdum tempor malesuada. Duis id est a urna luctus accumsan. Nulla ornare justo quis suscipit consectetur. Pellentesque ultricies risus non gravida tincidunt. Etiam condimentum urna justo, eget rhoncus ex gravida vel. Ut vel dignissim ipsum, in lobortis eros. Cras id malesuada elit, sed finibus est. Quisque mi neque, accumsan vitae orci malesuada, vehicula volutpat quam. Praesent ac arcu sapien. Morbi blandit et leo quis dictum. Proin pulvinar ante a orci cursus efficitur. Integer a consectetur ipsum. Integer ultrices mollis nibh, id gravida ex.<br/>
 					</p>
+
+					<div class="slideshow" id="slideshow2">
+						<img class="slide" src="http://www.datadreamer.com/_images/zkm_3_900.jpg">
+						<img class="slide" src="http://www.datadreamer.com/_images/zkm_4_900.jpg">
+						<img class="slide" src="http://www.datadreamer.com/_images/zkm_5_900.jpg">
+						<img class="slide" src="http://www.datadreamer.com/_images/zkm_1_900.jpg">
+						<img class="slide" src="http://www.datadreamer.com/_images/zkm_2_900.jpg">
+					</div>
+
+					<script>
+						$(window).load(function(){
+							$('#slideshow2').slideShow();
+							$('#slideshow2').height($('.slide').outerHeight());
+						});
+						$(window).resize(function(){
+							$('#slideshow2').height($('.slide').outerHeight());
+						});
+					/*
+						window.onload = function(){
+							$('#slideshow2').slideShow();
+							$('#slideshow2').height($('.slide').outerHeight());
+						}
+						window.onresize = function(){
+							$('#slideshow2').height($('.slide').outerHeight());
+						}
+					*/
+					</script>
+
+
 					<p>
 						Fusce eu diam vehicula, aliquam neque eu, pharetra nibh. Aliquam erat volutpat. Quisque nec commodo massa, quis semper enim. Etiam vehicula libero risus, ut pharetra sapien accumsan vitae. In tincidunt molestie erat vitae placerat. Fusce elit massa, rhoncus quis blandit at, tincidunt nec lectus. Quisque ex orci, vehicula non auctor nec, suscipit non turpis. Pellentesque vulputate eleifend elit. Quisque condimentum justo arcu, in iaculis est ullamcorper id. In hac habitasse platea dictumst. Mauris vestibulum ante euismod feugiat tempor.
 					</p>

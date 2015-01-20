@@ -285,6 +285,21 @@ div.entrybody a:hover{
 	text-decoration: underline;
 }
 
+div.slideshow{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	clear: both;
+}
+
+img.slide{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	left:0;
+	top:0;
+}
+
 div.tags{
 	margin: 10px 10px 14px 10px;
 }
