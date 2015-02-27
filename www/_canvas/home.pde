@@ -2,7 +2,7 @@ ArrayList<Node> nodes;
 int maxNodes = 30;
 int nodeCount = 0;
 int nodeRate = 200;
-int totalNodes = 150;
+int totalNodes = 500;
 long lastNode;
 
 void setup(){
@@ -65,7 +65,7 @@ class Node{
   PVector pos;
   PVector vec;
   float speed = 0.25;
-  float radius = width/9.0;//100;
+  float radius = 100;
   
   Node(){
     pos = new PVector(random(0, width), random(0, height));
