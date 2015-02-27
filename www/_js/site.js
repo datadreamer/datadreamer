@@ -26,7 +26,7 @@ function canvasLoaded(r, s, x){
 function galleryLoaded(r, s, x){
 	$('#slideshow').waitForImages(function() {
 		$('#slideshow').fadeIn(1000);
-		setTimeout(switchSlideShow(r, s, x), 2000); 
+		setTimeout(switchSlideShow(r, s, x), 2000);
 	});
 }
 
@@ -62,28 +62,16 @@ function resize(){
 			cols = 4;
 			loadGallery();
 		}
-	} else if(wiw >= 1550 && wiw < 1860){	// 5 col
+	} else if(wiw >= 1550 && wiw < 1920){	// 5 col
 		if(cols != 5){
 			w = 1540;
 			cols = 5;
 			loadGallery();
 		}
-	} else if(wiw >= 1860 && wiw < 2170){	// 6 col
+	} else if(wiw >= 1920){	// 6 col
 		if(cols != 6){
 			w = 1850;
 			cols = 6;
-			loadGallery();
-		}
-	} else if(wiw >= 2170 && wiw < 2480){	// 7 col
-		if(cols != 7){
-			w = 2160;
-			cols = 7;
-			loadGallery();
-		}
-	} else {								// 8 col
-		if(cols != 8){
-			w = 2470;
-			cols = 8;
 			loadGallery();
 		}
 	}
@@ -108,9 +96,11 @@ function resize(){
 	$('#galleryimage').css({width: w-20, height: h});
 	$('#videocontainer').css({left: l+"px", width: w, height: ((w-20) * videoAspectRatio)+20});
 	*/
-	$('#videocontainer').css({width: w, height: ((w-20) * videoAspectRatio)+20});
-	$('#video').css({width: w-20, height: (w-20) * videoAspectRatio});
-	$('#videoframe').css({width: w-20, height: (w-20) * videoAspectRatio});
+	if(videoAspectRatio != undefined){
+		$('#videocontainer').css({width: w, height: ((w-20) * videoAspectRatio)+20});
+		$('#video').css({width: w-20, height: (w-20) * videoAspectRatio});
+		$('#videoframe').css({width: w-20, height: (w-20) * videoAspectRatio});
+	}
 }
 
 // start a slideshow of images in the gallery
