@@ -38,31 +38,31 @@ function setCols(){
 function resize(){
 	var wiw = window.innerWidth;
 	
-	if(wiw < 620){							// 1 col
+	if(wiw < 640){							// 1 col
 		if(cols != 1){
 			w = 300;
 			cols = 1;
 			loadGallery();
 		}
-	} else if(wiw >= 620 && wiw < 930){		// 2 col
+	} else if(wiw >= 640 && wiw < 960){		// 2 col
 		if(cols != 2){
 			w = 610;
 			cols = 2;
 			loadGallery();
 		}
-	} else if(wiw >= 930 && wiw < 1240){	// 3 col
+	} else if(wiw >= 960 && wiw < 1280){	// 3 col
 		if(cols != 3){
 			w = 920;
 			cols = 3;
 			loadGallery();
 		}
-	} else if(wiw >= 1240 && wiw < 1550){	// 4 col
+	} else if(wiw >= 1280 && wiw < 1600){	// 4 col
 		if(cols != 4){
 			w = 1230;
 			cols = 4;
 			loadGallery();
 		}
-	} else if(wiw >= 1550 && wiw < 1920){	// 5 col
+	} else if(wiw >= 1600 && wiw < 1920){	// 5 col
 		if(cols != 5){
 			w = 1540;
 			cols = 5;
