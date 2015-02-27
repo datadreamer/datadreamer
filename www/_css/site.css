@@ -432,6 +432,7 @@ input[type=submit]{
 	}
 	#contenttitle{
 		font-size: 18px;
+		margin-bottom: 5px;
 	}
 	#contentdate{
 		font-size: 14px;
