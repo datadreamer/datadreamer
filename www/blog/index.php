@@ -2,6 +2,23 @@
 	// connect to db
 	$db = mysql_connect("localhost", "asiegel_web", "buttslol!") or die("Failed to connect to server.");
 	mysql_select_db("asiegel_blog") or die("Failed to select database.");
+
+	// prep twitter stuff
+	require_once '../_php/vendor/twitter/twitter.class.php';
+
+	// enables caching (path must exists and must be writable!)
+	// Twitter::$cacheDir = dirname(__FILE__) . '/temp';
+
+
+	// ENTER HERE YOUR CREDENTIALS (see credentials.txt)
+	
+
+	$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+
+	$statuses = $twitter->load(Twitter::ME);
+
+	date_default_timezone_set('America/Los_Angeles');
+
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +83,12 @@
 			<!-- menu titles -->
 
 			<div id="menutitles">
-				<div class="menutitle">
+				<div class="menutitle" id="tweetmenutitle">
+					<div class="menutitletext">
+						Tweets
+					</div>
+				</div>
+				<div class="menutitle" id="postmenutitle">
 					<div class="menutitletext">
 						Posts
 					</div>
@@ -76,16 +98,31 @@
 						Tags
 					</div>
 				</div>
-				<div class="menutitle" style="border-right: none; width: 33%;">
+				<div class="menutitle" id="mainmenutitle">
 					<div class="menutitletext">
 						Menu
 					</div>
 				</div>
 			</div>
 
+			<!-- tweets -->
+
+			<div class="submenu" id="tweetmenu">
+				<?php
+					// list all tweets fetched when the page loaded.
+					foreach ($statuses as $status){
+						echo "<a href='http://twitter.com/datadreamer/status/{$status->id_str}'>";
+						echo "<div class='submenuitem'>";
+						echo "<div class='submenutext'>$status->text</div>";
+						echo "</div></a>";
+					}
+				?>
+
+			</div>
+
 			<!-- posts -->
 
-			<div id="postmenu">
+			<div class="submenu" id="postmenu">
 				<?php
 					// list all blog posts as buttons to open permalinks.
 					$result = mysql_query("SELECT title,link,r,g,b FROM posts ORDER BY id DESC");
@@ -95,32 +132,56 @@
 						$r = $row['r'];
 						$g = $row['g'];
 						$b = $row['b'];
-						echo "<a href='http://www.datadreamer.com/blog/{$link}' style='color:rgb({$r},{$g},{$b});'>{$title}</a>";
+						//echo "<a href='http://www.datadreamer.com/blog/{$link}' style='color:rgb({$r},{$g},{$b});'>{$title}</a>";
+						echo "<a href='http://www.datadreamer.com/blog/{$link}'>";
+						echo "<div class='submenuitem'>";
+						echo "<div class='submenutext' style='color:rgb({$r},{$g},{$b});'>{$title}</div>";
+						echo "</div></a>";
 					}
 				?>
 			</div>
 
 			<!-- tags -->
 
-			<div id="tagmenu">
+			<div class="submenu" id="tagmenu">
 				<?php
 					// list all tags as buttons to open list of relavent posts.
 					$result = mysql_query("SELECT tag, count(tag) AS num FROM tags GROUP BY tag ORDER BY tag ASC");
 					while($row = mysql_fetch_assoc($result)){
 						$tag = $row['tag'];
 						$num = $row['num'];
-						echo "<a href='/blog/tag/{$tag}'>{$tag} <font class='tagnum'>{$num}</font></a>";
+						//echo "<a href='/blog/tag/{$tag}'>{$tag} <font class='tagnum'>{$num}</font></a>";
+						echo "<a href='/blog/tag/{$tag}'>";
+						echo "<div class='submenuitem tagmenuitem'>";
+						echo "<div class='submenutext tagmenutext'>{$tag} <font class='tagnum'>{$num}</font></div>";
+						echo "</div></a>";
 					}
 				?>
 			</div>
 
 			<!-- main menu -->
 
-			<div id="mainmenu">
-				<a href="/">Home</a>
-				<a href="http://datadreamer.com/blog">Blog</a>
-				<a href="http://datadreamer.com/about">About</a>
-				<a href="http://datadreamer.com/contact">Contact</a>
+			<div class="submenu" id="mainmenu">
+				<a href="/">
+					<div class="submenuitem mainmenuitem">
+						<div class="submenutext mainmenutext">Home</div>
+					</div>
+				</a>
+				<a href="http://datadreamer.com/blog">
+					<div class="submenuitem mainmenuitem">
+						<div class="submenutext mainmenutext">Blog</div>
+					</div>
+				</a>
+				<a href="http://datadreamer.com/about">
+					<div class="submenuitem mainmenuitem">
+						<div class="submenutext mainmenutext">About</div>
+					</div>
+				</a>
+				<a href="http://datadreamer.com/contact">
+					<div class="submenuitem mainmenuitem">
+						<div class="submenutext mainmenutext">Contact</div>
+					</div>
+				</a>
 			</div>
 		</div>
 

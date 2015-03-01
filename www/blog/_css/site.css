@@ -2,7 +2,7 @@ body{
 	background-color: #fff;
 	margin: 0px;
 	color: #000;
-	font-family: 'DINLightRegular';
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 }
 
@@ -27,7 +27,7 @@ body{
 a.logo{
 	text-decoration: none;
 	color: #fff;
-	font-family: 'BauhausRegular';
+	font-family: 'BauhausRegular', Helvetica, Arial, sans-serif;
 	font-size: 36px;
 }
 
@@ -35,7 +35,7 @@ a.logo{
 	clear: left;
 	color: #666;
 	margin: 10px;
-	font-family: 'DINMediumRegular';
+	font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
 	font-size: 10px; 
 }
 
@@ -61,124 +61,174 @@ a.sublogo{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color:#222;
 	z-index: 1000;
+	/* hack to hide leftover spice on the right side */
+	background: #333333; /* Old browsers */
+	background: -moz-linear-gradient(left, #333333 0%, #333333 90%, #222222 100%, #222222 100%, #222222 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#333333), color-stop(90%,#333333), color-stop(100%,#222222), color-stop(100%,#222222), color-stop(100%,#222222)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #333333 0%,#333333 90%,#222222 100%,#222222 100%,#222222 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #333333 0%,#333333 90%,#222222 100%,#222222 100%,#222222 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #333333 0%,#333333 90%,#222222 100%,#222222 100%,#222222 100%); /* IE10+ */
+	background: linear-gradient(to right, #333333 0%,#333333 90%,#222222 100%,#222222 100%,#222222 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#222222',GradientType=1 ); /* IE6-9 */
 }
+
+
+
+
+
+/* SUBMENU TITLES */
 
 #menutitles {
 	float: left;
 	clear: both;
 	width: 100%;
-	height: 30px;
+	height: 31px;
 	background-color: #333;
+	border-bottom: 1px #222 solid;
 }
-
 .menutitle{
 	float: left;
-	width: 50%;
+	display: block;
+	width: 49%;
+	max-width: 49%;
+	border-right: 1px #222 solid;
 	color: #fff;
+	background-color:#333;
 	font-size: 10px;
 	font-weight: 700;
 	text-transform: uppercase;
-	border-right: 1px #222 solid;
-	border-bottom: 1px #222 solid;
 }
-
+.menutitletext{
+	float: left;
+	clear: both;
+	width: 100%;
+	margin: 10px 0 10px 10px;
+}
+#tweetmenutitle{
+	display: none;
+}
 #tagmenutitle{
 	display: none;
 }
+#postmenutitle{
 
-.menutitletext{
-	margin: 10px 0 10px 10px;
+}
+#mainmenutitle{
+	border-right: none;
 }
 
-#postmenu {
+
+
+
+
+/* SUB MENU GENERIC CLASSES */
+
+.submenu{
 	float: left;
-	width: 50%;
+	display: block;
+	max-width: 49%;
+	margin-right: 1px;
 	height: 100%;
-	border-right: 1px #333 solid;
+	background-color:#222;
 	overflow: scroll;
 }
-
-#postmenu::-webkit-scrollbar {
+.submenu::-webkit-scrollbar {
     width: 0px;
 }
-
-#postmenu a{
+.submenu a{
+	text-decoration: none;
+	border: none;
+}
+.submenuitem{
 	float: left;
 	clear: both;
-	font-family: 'DINMediumRegular';
-	font-size: 10px;
-	font-weight: 500;
-	color: #fff;
-	text-decoration: none;
 	width: 100%;
-	height: 20px;
-	padding: 10px 0 10px 10px;
+	height: 50px;
+	line-height: 50px;
 	border-bottom: 1px #333 solid;
-    overflow: hidden;
+	vertical-align:middle;
 }
-
-#postmenu a:hover{
+.submenuitem:hover{
+	cursor:pointer;
 	background-color: #333;
 }
-
-#tagmenu {
-	display: none;
-	float: left;
-	height: 100%;
-	border-right: 1px #333 solid;
-	overflow: scroll;
+.submenuitem:hover .submenutext{
+	color:#fff;
 }
-
-#tagmenu::-webkit-scrollbar {
-    width: 0px;
+.submenutext{
+	display: inline-block;
+    vertical-align: middle;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	font-size: 10px;
+    line-height: 11px;
+	font-weight: 500;
+	color: #ccc;
+	text-decoration: none;
+	margin: 10px;
+	max-height: 34px;
+	overflow: hidden;
 }
-
-#tagmenu a{
+.submenubottom{
 	float: left;
+	height: 100px;
 	clear: both;
-	font-family: 'DINLightRegular';
+}
+
+
+
+/* SUB MENU MODIFIERS */
+
+.tagmenuitem{
+	height: 51px;
+	line-height: 51px;
+	border-bottom: none;
+}
+.tagmenutext{
+	font-family: 'DINLightRegular', Helvetica, Arial, sans-serif;
 	font-size: 18px;
+	line-height: 18px;
 	font-weight: 100;
 	color: #fff;
-	text-decoration: none;
 	text-transform: uppercase;
-	width: 100%;
-	height: 21px;
-	padding: 10px 0 10px 10px;
+	white-space: nowrap;
 }
-
-#tagmenu a:hover{
-	background-color: #333;
-}
-
 .tagnum {
 	color: #666;
 }
-
-#mainmenu {
-	float: right;
+#tweetmenu{
+	display: none;
 }
-
-#mainmenu a{
-	float: right;
-	clear: both;
-	font-family: 'DINMediumRegular';
+#tagmenu{
+	display: none;
+}
+#mainmenu{
+	width: 50%;
+	margin-right: 0;
+}
+.mainmenuitem{
+	height: 51px;
+	line-height: 51px;
+	border-bottom: none;
+}
+.mainmenutext{
+	font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
 	font-size: 30px;
+	line-height: 31px;
 	font-weight: 700;
 	color: #fff;
-	text-decoration: none;
 	text-transform: uppercase;
 	text-align: right;
-	padding: 5px 10px 5px 0;
-	width: 100%;
-	height: 31px;
 }
 
-#mainmenu a:hover{
-	background-color: #333;
-}
+
+
+
+
+
+
+
+
 
 hr {
 	border-width: 0px;
@@ -186,11 +236,6 @@ hr {
 	height: 1px;
 	margin: 0px;
 }
-
-
-
-
-
 
 #entries{
 	margin-top: 60px;
@@ -213,7 +258,7 @@ div.entrypreview a {
 div.entrypreviewdate{
 	margin-left: 10px;
 	padding-bottom: 10px;
-	font-family: 'DINMediumRegular';
+	font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
 	font-size: 10px;
 	text-transform: uppercase;
 	color: #fff;
@@ -252,7 +297,7 @@ div.entrytitletext{
 	margin: 0 10px 10px 10px;
 	padding-top: 10px;
 	font-size: 36px;
-	font-family: 'DINMediumRegular';
+	font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	line-height: 1.1em;
 	color: #fff;
@@ -261,7 +306,7 @@ div.entrytitletext{
 div.entrydate{
 	margin-left: 10px;
 	padding-bottom: 10px;
-	font-family: 'DINMediumRegular';
+	font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
 	font-size: 10px;
 	text-transform: uppercase;
 	color: #fff;
@@ -345,20 +390,47 @@ div.sharebutton img{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width: 480px) {
+
+	/* menu titles */
 	.menutitle{
 		width: 33%;
 	}
 	#tagmenutitle{
 		display: block;
 	}
-	#postmenu{
+
+	/* menus */
+	.submenu{
 		width: 33%;
 	}
 	#tagmenu{
 		display: block;
-		width: 33%;
 	}
+	#mainmenu{
+		width: 32%;
+	}
+
+	/* entries */
 	div.entrypreview {
 		width: 50%;
 	}
@@ -368,24 +440,18 @@ div.sharebutton img{
 }
 
 @media only screen and (min-width: 720px) {
-	#postmenu a{
-		font-size: 18px;
-		height: 40px;
+
+	/* menus */
+	.mainmenutext{
+		font-size: 36px;
+		line-height: 36px;
 	}
-	#tagmenu{
-		display: block;
-		width: 33%;
-	}
-	#tagmenu a{
+	.tagmenutext{
 		font-size: 24px;
-		height: 31px;
-		padding: 20px 0 10px 10px;
+		line-height: 24px;
 	}
-	#mainmenu a{
-		font-size: 50px;
-		padding: 5px 10px 5px 0;
-		height: 51px;
-	}
+
+	/* entries */
 	div.entrypreview {
 		width: 33.33%;
 	}
@@ -410,21 +476,65 @@ div.sharebutton img{
 	}
 }
 
+@media only screen and (min-width: 960px) {
+
+	/* menu titles */
+	.menutitle{
+		width: 25%;
+	}
+	#tweetmenutitle{
+		display: block;
+	}
+	#mainmenutitle{
+		width: 24%;
+	}
+
+	/* menus */
+	.submenu{
+		width: 25%;
+	}
+	#tweetmenu{
+		width: 25%;
+		display: block;
+	}
+	#mainmenu{
+		width: 24%;
+	}
+}
+
+
 @media only screen and (min-width: 1080px) {
-	#postmenu a{
-		font-size: 28px;
-		height: 70px;
+	
+	/* menus */
+	.submenuitem {
+		height: 60px;
+		line-height: 60px;
 	}
-	#tagmenu a{
-		font-size: 38px;
-		padding: 30px 0 10px 10px;
-		height: 51px;
+	.submenutext {
+		font-size: 14px;
+		line-height: 16px;
+		max-height: 34px;
 	}
-	#mainmenu a{
-		font-size: 80px;
-		padding: 5px 10px 5px 0;
-		height: 81px;
+	.mainmenuitem{
+		height: 61px;
+		line-height: 61px;
 	}
+	.mainmenutext{
+		max-height: 50px;
+		font-size: 42px;
+		line-height: 42px;
+	}
+	.tagmenuitem{
+		height: 61px;
+		line-height: 61px;
+	}
+	.tagmenutext{
+		max-height: 50px;
+		font-size: 24px;
+		line-height: 24px;
+	}
+
+	/* entries */
 	div.entrypreview {
 		width: 20%;
 	}
@@ -451,6 +561,37 @@ div.sharebutton img{
 }
 
 @media only screen and (min-width: 1280px) {
+
+	/* menus */
+	.submenuitem {
+		height: 100px;
+		line-height: 100px;
+	}
+	.submenutext {
+		font-size: 18px;
+		line-height: 20px;
+		max-height: 80px;
+	}
+	.mainmenuitem{
+		height: 101px;
+		line-height: 101px;
+	}
+	.mainmenutext{
+		max-height: 80px;
+		font-size: 60px;
+		line-height: 60px;
+	}
+	.tagmenuitem{
+		height: 101px;
+		line-height: 101px;
+	}
+	.tagmenutext{
+		max-height: 80px;
+		font-size: 36px;
+		line-height: 36px;
+	}
+
+	/* entries */
 	div.entrydate{
 		font-size: 24px;
 	}
@@ -476,26 +617,38 @@ div.sharebutton img{
 	}
 }
 
-
 @media only screen and (min-width: 1920px) {
-	div.postmenuitem{
-		padding: 0px;
+
+	/* menus */
+	.submenuitem {
+		height: 160px;
+		line-height: 160px;
 	}
-	#postmenu a{
-		font-size: 32px;
-		padding: 10px;
-		height: 120px;
+	.submenutext {
+		font-size: 28px;
+		line-height: 30px;
+		max-height: 140px;
 	}
-	#tagmenu a{
-		font-size: 70px;
-		padding: 40px 0 0 10px;
-		height: 101px;
+	.mainmenuitem{
+		height: 161px;
+		line-height: 161px;
 	}
-	#mainmenu a{
-		font-size: 120px;
-		padding: 10px 10px 10px 0;
-		height: 121px;
+	.mainmenutext{
+		max-height: 140px;
+		font-size: 100px;
+		line-height: 100px;
 	}
+	.tagmenuitem{
+		height: 161px;
+		line-height: 161px;
+	}
+	.tagmenutext{
+		max-height: 140px;
+		font-size: 60px;
+		line-height: 60px;
+	}
+	
+	/* entries */
 	div.entrypreview {
 		width: 16.66%;
 	}
