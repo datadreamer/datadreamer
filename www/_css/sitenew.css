@@ -50,7 +50,6 @@ footer{
   height: 250px;
   margin: 0.25%;
   color: #fff;
-  cursor: pointer;
 
   /*
   background-size: cover;
@@ -200,6 +199,7 @@ footer{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: default;
 }
 
 /* IDS */
@@ -249,6 +249,8 @@ footer{
   font-weight: 700;
   line-height: 1.1em;
   color: rgba(0,0,0,0.5);
+  animation-name: fadeInAnimation;
+  animation-duration: 2s;
 }
 
 #splashtext p{
@@ -263,6 +265,8 @@ footer{
   font-size: 24px;
   font-weight: 700;
   color: rgba(0,0,0,0.5);
+  animation-name: fadeInAnimation;
+  animation-duration: 2s;
 }
 
 #container{
@@ -280,6 +284,13 @@ footer{
 #praetorians{
   margin: 10px;
   float: right;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeInAnimation{
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 
