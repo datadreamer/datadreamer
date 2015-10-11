@@ -273,7 +273,9 @@ footer{
   position: relative;
   width: 100%;
   top: 100vh;
-  background-color: #fff;
+  background-color: #fff !important;
+  display: inline-block;
+  z-index: -1;
 }
 
 #copyright{
