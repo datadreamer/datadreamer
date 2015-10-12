@@ -29,6 +29,11 @@ function mouseMoved(){
   // TODO: send normalized coordinates to broadcast server
 }
 
+function touchMoved(){
+  //console.log(getMouseX() +", "+ getMouseY());
+  // TODO: send normalized coordinates to broadcast server
+}
+
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
   background(0,30,50);
