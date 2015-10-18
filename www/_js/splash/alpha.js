@@ -37,10 +37,32 @@ function getMouseY(){
   return mouseY / windowHeight;
 }
 
+function mouseDragged(){
+  // TODO: send normalized coordinates to broadcast server
+  if(millis() - lastspawn > spawndelay){
+    var s = new Spot();
+    s.maxalpha = 255;
+    s.alpha = 255;
+    spotlist.push(s);
+    lastspawn = millis();
+  }
+}
+
 function mouseMoved(){
   // TODO: send normalized coordinates to broadcast server
   if(millis() - lastspawn > spawndelay){
     spotlist.push(new Spot());
+    lastspawn = millis();
+  }
+}
+
+function mousePressed(){
+  // TODO: send normalized coordinates to broadcast server
+  if(millis() - lastspawn > spawndelay){
+    var s = new Spot();
+    s.maxalpha = 255;
+    s.alpha = 255;
+    spotlist.push(s);
     lastspawn = millis();
   }
 }
@@ -68,23 +90,24 @@ function Spot(){
   this.xvec = random(-2,2);
   this.yvec = random(-2,2);
   this.damping = 0.997;
-  this.alpha = 1;
+  this.maxalpha = 50;
+  this.alpha = this.maxalpha;
 }
 
 Spot.prototype = {
   constructor: Spot,
 
   draw:function(){
-    fill(0,150,255,1 * this.alpha);
+    fill(0,150,255, this.alpha / 10);
     ellipse(this.x, this.y, 100 * this.d, 100 * this.d);
-    fill(0,150,255,5 * this.alpha);
+    fill(0,150,255, this.alpha / 4);
     ellipse(this.x, this.y, 50 * this.d, 50 * this.d);
-    fill(255,255,255,10 * this.alpha);
+    fill(255,255,255, this.alpha / 2);
     ellipse(this.x, this.y, 20 * this.d, 20 * this.d);
-    fill(255,255,255,20 * this.alpha);
+    fill(255,255,255, this.alpha);
     ellipse(this.x, this.y, 5 * this.d, 5 * this.d);
     if(this.progress() < 1){
-      this.alpha = 1 - this.progress();
+      this.alpha = this.maxalpha - (this.progress() * 255);
     } else {
       this.alpha = 0;
       this.dead = true;
