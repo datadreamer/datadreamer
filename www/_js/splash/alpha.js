@@ -1,5 +1,7 @@
 var spotlist = [];
 var deadspotlist = [];
+var lastspawn = 0;
+var spawndelay = 50;
 
 function setup(){
   var canvas = createCanvas(windowWidth,windowHeight);
@@ -10,7 +12,7 @@ function setup(){
 }
 
 function draw(){
-  background(0,30,50,20);
+  background(0,30,50);
   for(var i=0; i<spotlist.length; i++){
     spotlist[i].move();
     spotlist[i].draw();
@@ -37,7 +39,10 @@ function getMouseY(){
 
 function mouseMoved(){
   // TODO: send normalized coordinates to broadcast server
-  spotlist.push(new Spot());
+  if(millis() - lastspawn > spawndelay){
+    spotlist.push(new Spot());
+    lastspawn = millis();
+  }
 }
 
 function touchMoved(){
@@ -59,6 +64,7 @@ function Spot(){
   this.dead = false;
   this.x = mouseX;
   this.y = mouseY;
+  this.d = random(0.5, 3);
   this.xvec = random(-2,2);
   this.yvec = random(-2,2);
   this.damping = 0.997;
@@ -70,13 +76,13 @@ Spot.prototype = {
 
   draw:function(){
     fill(0,150,255,1 * this.alpha);
-    ellipse(this.x, this.y, 100, 100);
+    ellipse(this.x, this.y, 100 * this.d, 100 * this.d);
     fill(0,150,255,5 * this.alpha);
-    ellipse(this.x, this.y, 50, 50);
+    ellipse(this.x, this.y, 50 * this.d, 50 * this.d);
     fill(255,255,255,10 * this.alpha);
-    ellipse(this.x, this.y, 20, 20);
+    ellipse(this.x, this.y, 20 * this.d, 20 * this.d);
     fill(255,255,255,20 * this.alpha);
-    ellipse(this.x, this.y, 5, 5);
+    ellipse(this.x, this.y, 5 * this.d, 5 * this.d);
     if(this.progress() < 1){
       this.alpha = 1 - this.progress();
     } else {
