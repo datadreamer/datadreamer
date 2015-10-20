@@ -134,7 +134,7 @@
 
 			<!-- FOOTER CONTAINS COPYRIGHT INFO AND PRAETORIANS EASTER EGG -->
 
-			<footer>
+			<footer data-sr>
 				<div id="copyright">
 					&#169; AARON SIEGEL 2004 - 2015.
 				</div>
@@ -155,11 +155,6 @@
 
 		</div>
 
-		<script src="_js/vendor/scrollReveal.min.js"></script>
-		<script>
-      window.sr = new scrollReveal();
-    </script>
-
 		<!-- HEADER CONTAINS TITLE AND MENU -->
 
 		<header>
@@ -175,6 +170,21 @@
 				The work of <a href="/about">Aaron Siegel</a>
 			</div>
 		</header>
+
+
+		<script src="_js/vendor/scrollReveal.min.js"></script>
+		<script>
+      window.sr = new scrollReveal();
+			$(function(){
+				$(window).scroll(function(){
+					if ($(this).scrollTop() > 100) {
+                $('header').fadeIn();
+            } else {
+                $('header').fadeOut();
+            }
+				});
+			});
+    </script>
 
 
 	</body>
