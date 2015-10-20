@@ -252,8 +252,11 @@ footer{
   font-weight: 700;
   line-height: 1.1em;
   color: #fff;
+  opacity: 0;
   animation-name: fadeInAnimation;
   animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
 }
 
 #splashtext p{
