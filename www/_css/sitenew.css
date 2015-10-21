@@ -14,7 +14,6 @@ header{
 	width: 100%;
 	height: 60px;
 	background-color: #222;
-  display: none;
 }
 
 a{
@@ -53,44 +52,14 @@ footer{
   margin: 0.25% 0px 0.25% 0px;
   height: 250px;
   color: #fff;
-
-  /*
-  background-size: cover;
-  background-position: center;
-  */
-  /*
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-  filter: gray;
-  -webkit-filter: grayscale(100%);
-  -webkit-transition: -webkit-filter 300ms linear;
-  */
 }
-
-/*
-.item:hover{
-  -ms-transform: scale(1.1,1.1);
-  -webkit-transform: scale(1.1,1.1);
-  transform: scale(1.1,1.1);
-}
-*/
-
 
 .item:hover .itemimg{
   opacity: 0.8;
-  /*
-  filter: none;
-  -webkit-filter: grayscale(0%);
-  */
 }
 
 .item:hover .itemtext{
   background-color: rgba(0,150,255,0.6);
-  /*
-  background: -webkit-linear-gradient(rgba(0,0,0,0.5) 50%, transparent);
-  background: -o-linear-gradient(rgba(0,0,0,0.5) 50%, transparent);
-  background: -moz-linear-gradient(rgba(0,0,0,0.5) 50%, transparent);
-  background: linear-gradient(rgba(0,0,0,0.5) 50%, transparent);
-  */
 }
 
 .item:hover .title{
@@ -205,6 +174,14 @@ footer{
   cursor: default;
 }
 
+.slide{
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
 /* IDS */
 
 #logo{
@@ -254,13 +231,22 @@ footer{
   color: #fff;
   opacity: 0;
   animation-name: fadeInAnimation;
+  -webkit-animation-duration: 2s
   animation-duration: 2s;
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
 #splashtext p{
   margin: 0px 0px 0px 10px;
+}
+
+#slideshow{
+  width: 100%;
+  height: auto;
+  background-color: #036;
 }
 
 #downarrow{
@@ -283,6 +269,38 @@ footer{
   background-color: #fff !important;
   display: inline-block;
   z-index: -1;
+}
+
+#main{
+  position: relative;
+  top: 60px;
+}
+
+#content{
+  clear: both;
+  width: 100%;
+  max-width: 1280px;
+  background-color: #fff !important;
+}
+
+#projecttitle{
+
+}
+
+#projectdate{
+
+}
+
+#projecttags{
+
+}
+
+#projectbody{
+
+}
+
+#projectbodytext{
+
 }
 
 #copyright{
