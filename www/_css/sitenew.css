@@ -31,6 +31,7 @@ a:active{
 }
 
 h1{
+  font-size: 18px;
   margin: 10px;
 }
 
@@ -308,7 +309,7 @@ footer{
 #projecttags{
   float: left;
   text-transform: uppercase;
-  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-family: 'DINLightRegular', Helvetica, Arial, sans-serif;
   font-size: 10px;
   margin: 0 10px 10px 10px;
 }
@@ -347,6 +348,9 @@ footer{
   body{
     font-size: 12px;
   }
+  h1{
+    font-size: 22px;
+  }
   .title{
     font-size: 18px;
   }
@@ -359,17 +363,32 @@ footer{
   body{
     font-size: 14px;
   }
+  h1{
+    font-size: 26px;
+  }
   .title{
     font-size: 20px;
   }
   #splashtext{
   	font-size: 32px;
   }
+  #projectdate{
+    font-size: 14px;
+    margin: 0 0 10px 10px;
+  }
+
+  #projecttags{
+    font-size: 14px;
+    margin: 0 10px 10px 10px;
+  }
 }
 
 @media only screen and (min-width: 640px) {		/* two */
   body{
     font-size: 12px;
+  }
+  h1{
+    font-size: 30px;
   }
   .title{
     font-size: 18px;
@@ -392,6 +411,9 @@ footer{
 @media only screen and (min-width: 720px) {		/* three */
   body{
     font-size: 12px;
+  }
+  h1{
+    font-size: 38px;
   }
   .title{
     font-size: 18px;
