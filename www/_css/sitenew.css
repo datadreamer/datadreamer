@@ -187,6 +187,13 @@ footer{
   height: auto;
 }
 
+.taglink{
+  color: #666;
+}
+.taglink:active{
+  color: #0099ff;
+}
+
 /* IDS */
 
 #logo{
