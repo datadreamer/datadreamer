@@ -30,6 +30,10 @@ a:active{
   color: #fff;
 }
 
+h1{
+  margin: 10px;
+}
+
 footer{
   float: left;
   clear: both;
@@ -39,7 +43,7 @@ footer{
   color: #fff;
   font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
   font-size: 10px;
-  margin-top: 0.25%;
+  /*margin-top: 0.25%;*/
 }
 
 /* CLASS */
@@ -176,7 +180,7 @@ footer{
 
 .slide{
   position: absolute;
-  top: 60px;
+  top: 0;
   left: 0;
   width: 100%;
   height: auto;
@@ -231,7 +235,7 @@ footer{
   color: #fff;
   opacity: 0;
   animation-name: fadeInAnimation;
-  -webkit-animation-duration: 2s
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
@@ -244,9 +248,11 @@ footer{
 }
 
 #slideshow{
+  position: relative;
+  top: 60px;
   width: 100%;
-  height: auto;
-  background-color: #036;
+  margin: 0px;
+  background-color: #fff;
 }
 
 #downarrow{
@@ -271,36 +277,50 @@ footer{
   z-index: -1;
 }
 
-#main{
-  position: relative;
-  top: 60px;
-}
-
 #content{
-  clear: both;
+  margin: 60px auto 0 auto;
   width: 100%;
   max-width: 1280px;
   background-color: #fff !important;
 }
 
 #projecttitle{
+  float: left;
+  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+}
 
+#projectdeets{
+  float: left;
+  width: 100%;
 }
 
 #projectdate{
-
+  float: left;
+  text-transform: uppercase;
+  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  margin: 0 0 10px 10px;
 }
 
 #projecttags{
-
+  float: left;
+  text-transform: uppercase;
+  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  margin: 0 10px 10px 10px;
 }
 
 #projectbody{
-
+  margin: 10px 10px 0 10px;
+  padding: 0 0 20px 0;
 }
 
-#projectbodytext{
-
+.projectbodytext{
+  margin: 0px;
+  width: 100%;
 }
 
 #copyright{
@@ -362,6 +382,11 @@ footer{
   #splashtext{
   	font-size: 38px;
   }
+  .projectbodytext{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
 }
 
 @media only screen and (min-width: 720px) {		/* three */
@@ -378,6 +403,11 @@ footer{
   }
   #splashtext{
   	font-size: 50px;
+  }
+  .projectbodytext{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
   }
 }
 
