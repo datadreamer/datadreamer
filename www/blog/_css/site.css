@@ -36,7 +36,7 @@ a.logo{
 	color: #666;
 	margin: 10px;
 	font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
-	font-size: 10px; 
+	font-size: 10px;
 }
 
 a.sublogo{
@@ -265,7 +265,7 @@ div.entrypreviewdate{
 }
 
 div.entryabstract {
-	margin: 0 10px 0 10px;	
+	margin: 0 10px 0 10px;
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	color: #fff;
@@ -273,7 +273,7 @@ div.entryabstract {
 
 div.entrytitle{
 	position: relative;
-	width: 100%;	
+	width: 100%;
 	height: 100%;
 }
 
@@ -312,8 +312,12 @@ div.entrydate{
 	color: #fff;
 }
 
+div.entrybody{
+	max-width: 1280px;
+}
+
 div.entrybody p{
-	margin: 10px 10px 14px 10px;	
+	margin: 10px 10px 14px 10px;
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
@@ -346,15 +350,16 @@ img.slide{
 }
 
 div.tags{
+	max-width: 1280px;
 	margin: 10px 10px 14px 10px;
 }
 
 div.tags a{
-	text-decoration: none;		
+	text-decoration: none;
 }
 
 div.tags a:hover{
-	text-decoration: underline;		
+	text-decoration: underline;
 }
 
 p.caption{
@@ -363,6 +368,7 @@ p.caption{
 }
 
 div.share{
+	max-width: 1280px;
 	display: block;
 	margin-left: 10px;
 	margin-bottom: 80px;
@@ -465,7 +471,7 @@ div.sharebutton img{
 		font-size: 14px;
 	}
 	div.tags {
-		font-size: 18px;		
+		font-size: 18px;
 	}
 	div.share{
 		margin-bottom: 180px;
@@ -474,6 +480,16 @@ div.sharebutton img{
 		width: 48px;
 		height: 48px;
 	}
+/*
+	div.cols{
+		-webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+		-webkit-column-gap: 10px;
+		-moz-column-count: 10px;
+		column-gap: 10px;
+	}
+	*/
 }
 
 @media only screen and (min-width: 960px) {
@@ -504,7 +520,7 @@ div.sharebutton img{
 
 
 @media only screen and (min-width: 1080px) {
-	
+
 	/* menus */
 	.submenuitem {
 		height: 60px;
@@ -549,7 +565,7 @@ div.sharebutton img{
 	}
 	div.tags {
 		font-size: 22px;
-		margin: 10px 10px 20px 10px;		
+		margin: 10px 10px 20px 10px;
 	}
 	div.share{
 		margin-bottom: 240px;
@@ -596,7 +612,8 @@ div.sharebutton img{
 		font-size: 24px;
 	}
 	div.entrybody{
-		font-size: 32px;
+		/*font-size: 32px;*/
+		margin: 0 auto 0 auto;
 	}
 	div.entrybody p{
 		margin: 20px 10px 30px 10px;
@@ -606,7 +623,11 @@ div.sharebutton img{
 	}
 	div.tags {
 		font-size: 32px;
-		margin: 10px 10px 30px 10px;
+		margin: 10px auto 30px auto;
+	}
+	div.share{
+		width: 100%;
+		margin: 0px auto 200px auto;
 	}
 	div.sharebutton{
 		margin-right: 20px;
@@ -647,7 +668,7 @@ div.sharebutton img{
 		font-size: 60px;
 		line-height: 60px;
 	}
-	
+
 	/* entries */
 	div.entrypreview {
 		width: 16.66%;
@@ -656,7 +677,7 @@ div.sharebutton img{
 		font-size: 32px;
 	}
 	div.entrybody{
-		font-size: 48px;
+		/*font-size: 48px;*/
 	}
 	div.entrybody p{
 		margin: 40px 10px 50px 10px;
