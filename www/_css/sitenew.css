@@ -194,6 +194,20 @@ footer{
   color: #0099ff;
 }
 
+.video{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.videoframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* IDS */
 
 #logo{
@@ -298,11 +312,13 @@ footer{
   font-weight: 700;
   font-size: 16px;
   width: 100%;
+  margin-top: 20px;
 }
 
 #projectdeets{
   float: left;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 #projectdate{
@@ -327,7 +343,7 @@ footer{
 }
 
 .projectbodytext{
-  margin: 0px;
+  margin: 0 0 20px 0;
   width: 100%;
 }
 
@@ -346,6 +362,19 @@ footer{
 @keyframes fadeInAnimation{
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+/* this timing only works with 4 slides */
+@keyframes xfade{
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
 }
 
 

@@ -21,18 +21,19 @@
 		<!-- 16:9 SLIDESHOW ELEMENT -->
 
 		<div id="slideshow">
-			<img class="slide" src="http://placehold.it/1600x900" style="position: static;">
-			<img class="slide" src="http://placehold.it/1280x720">
-			<img class="slide" src="http://placehold.it/960x540">
+			<img class="slide" src="http://placehold.it/1600x900" style="position: static; animation: xfade 16s 12s infinite;">
+			<img class="slide" src="http://placehold.it/1280x720" style="animation: xfade 16s 8s infinite;">
+			<img class="slide" src="http://placehold.it/960x540" style="animation: xfade 16s 4s infinite;">
+			<img class="slide" src="http://placehold.it/1920x1080" style="animation: xfade 16s 0s infinite;">
 		</div>
 
 		<!-- PROJECT DETAILS -->
 
 		<div id="content">
-			<div id="projecttitle">
+			<div id="projecttitle" data-sr>
 				<h1>This is the project title</h1>
 			</div>
-			<div id="projectdeets">
+			<div id="projectdeets" data-sr>
 				<div id="projectdate">
 					Fall 2015
 				</div>
@@ -41,7 +42,7 @@
 				</div>
 			</div>
 			<div id="projectbody">
-				<p class="projectbodytext">
+				<p class="projectbodytext" data-sr>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere a diam a ultricies. Fusce rhoncus neque egestas justo tincidunt suscipit. Nam hendrerit felis in justo tempus ultricies. Morbi ac magna mi. Fusce hendrerit nulla nec ante sodales ornare. Suspendisse potenti. Quisque a posuere sem. Etiam augue elit, molestie sed lacus ut, suscipit aliquet metus. Praesent tempor nulla ipsum, sit amet tempor purus luctus at.<br/>
 					<br/>
 					Proin feugiat pulvinar aliquet. Curabitur luctus augue in ligula facilisis molestie. Nullam ac sem orci. Mauris id auctor est, eget porta massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus facilisis arcu ut libero vestibulum faucibus. Cras eleifend dolor quis odio malesuada luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et interdum mauris. Vestibulum quis consequat massa, eget eleifend ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae libero ornare, convallis turpis a, accumsan arcu.<br/>
@@ -52,6 +53,11 @@
 					<br/>
 					Donec imperdiet, mi at accumsan porttitor, ligula ipsum scelerisque orci, a eleifend turpis ligula et libero. Sed sit amet urna eget ante placerat mollis at nec magna. Etiam varius lacinia tellus. Nam egestas turpis in enim tincidunt tincidunt. Morbi non sem in neque malesuada rhoncus eget sit amet libero. In cursus purus id massa feugiat hendrerit. Phasellus faucibus massa ut facilisis ultrices. Etiam commodo quam est, at eleifend purus tempus sit amet. Phasellus accumsan felis urna. Vivamus lectus ex, auctor et sollicitudin laoreet, dapibus ut dui.
 				</p>
+				<!--
+				<div class="video" data-sr>
+					<iframe class="videoframe" src="http://www.youtube.com/embed/iz9d6a4PofM" frameborder="0" allowfullscreen></iframe>
+				</div>
+				-->
 			</div>
 
 		</div>
