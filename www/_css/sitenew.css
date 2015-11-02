@@ -29,6 +29,9 @@ a:visited{
 a:active{
   color: #fff;
 }
+a.hidden:hover{
+  color:#fff;
+}
 
 h1{
   font-size: 18px;
@@ -372,7 +375,7 @@ footer{
   25% {
     opacity:0;
   }
-  92% {
+  90% {
     opacity:0;
   }
 }
