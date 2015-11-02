@@ -340,6 +340,24 @@ footer{
   margin: 0 10px 10px 10px;
 }
 
+#projectlink{
+  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  float: left;
+  clear: both;
+  color: #fff;
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #09f;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#projectlink:hover{
+  background-color: #0af;
+}
+
 #projectbody{
   margin: 10px 10px 0 10px;
   padding: 0 0 20px 0;
@@ -415,10 +433,12 @@ footer{
     font-size: 14px;
     margin: 0 0 10px 10px;
   }
-
   #projecttags{
     font-size: 14px;
     margin: 0 10px 10px 10px;
+  }
+  #projectlink{
+    font-size: 14px;
   }
 }
 
