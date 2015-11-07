@@ -14,6 +14,7 @@ header{
 	width: 100%;
 	height: 60px;
 	background-color: #222;
+  z-index: 1000;
 }
 
 a{
@@ -187,7 +188,9 @@ footer{
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  padding-bottom: 41.88%;
+  background-size: contain;
+  opacity: 0;
 }
 
 .taglink{
@@ -273,9 +276,11 @@ footer{
 }
 
 #slideshow{
+  float: left;
   position: relative;
-  top: 60px;
+  top: 0px;
   width: 100%;
+  padding-bottom: 41.88%;
   margin: 0px;
   background-color: #fff;
 }
@@ -383,19 +388,6 @@ footer{
 @keyframes fadeInAnimation{
   from {opacity: 0;}
   to {opacity: 1;}
-}
-
-/* this timing only works with 4 slides */
-@keyframes xfade{
-  17% {
-    opacity:1;
-  }
-  25% {
-    opacity:0;
-  }
-  90% {
-    opacity:0;
-  }
 }
 
 

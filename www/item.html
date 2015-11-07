@@ -18,13 +18,68 @@
 
 	<body>
 
-		<!-- 16:9 SLIDESHOW ELEMENT -->
+		<style>
+			/* This should automatically be generated server side. */
+
+			/* this timing only works with 4 slides */
+			@keyframes xfade{
+				0{opacity:0;z-index:4;}
+				12.5%{opacity:1;}
+				37.5%{opacity:1;}
+				50%{opacity:0;z-index:3;}
+			}
+
+			#slide1{
+				background-image: url('_images/formulaonecity_1_590.jpg');
+				animation: xfade 16s linear 0s infinite;
+			}
+			#slide2{
+				background-image:url('_images/formulaonecity_2_590.jpg');
+				animation: xfade 16s linear 4s infinite;
+			}
+			#slide3{
+				background-image:url('_images/formulaonecity_3_590.jpg');
+				animation: xfade 16s linear 8s infinite;
+			}
+			#slide4{
+				background-image:url('_images/formulaonecity_4_590.jpg');
+				animation: xfade 16s linear 12s infinite;
+			}
+
+			@media only screen and (min-width: 590px){
+				#slide1{background-image:url('_images/formulaonecity_1_900.jpg');}
+				#slide2{background-image:url('_images/formulaonecity_2_900.jpg');}
+				#slide3{background-image:url('_images/formulaonecity_3_900.jpg');}
+				#slide4{background-image:url('_images/formulaonecity_4_900.jpg');}
+			}
+
+			@media only screen and (min-width: 900px){
+				#slide1{background-image:url('_images/formulaonecity_1_1210.jpg');}
+				#slide2{background-image:url('_images/formulaonecity_2_1210.jpg');}
+				#slide3{background-image:url('_images/formulaonecity_3_1210.jpg');}
+				#slide4{background-image:url('_images/formulaonecity_4_1210.jpg');}
+			}
+
+			@media only screen and (min-width: 1210px){
+				#slide1{background-image:url('_images/formulaonecity_1_1520.jpg');}
+				#slide2{background-image:url('_images/formulaonecity_2_1520.jpg');}
+				#slide3{background-image:url('_images/formulaonecity_3_1520.jpg');}
+				#slide4{background-image:url('_images/formulaonecity_4_1520.jpg');}
+			}
+
+			@media only screen and (min-width: 1520px){
+				#slide1{background-image:url('_images/formulaonecity_1_1830.jpg');}
+				#slide2{background-image:url('_images/formulaonecity_2_1830.jpg');}
+				#slide3{background-image:url('_images/formulaonecity_3_1830.jpg');}
+				#slide4{background-image:url('_images/formulaonecity_4_1830.jpg');}
+			}
+		</style>
 
 		<div id="slideshow">
-			<img class="slide" src="http://placehold.it/1600x900" style="position: static; animation: xfade 16s 12s infinite;">
-			<img class="slide" src="http://placehold.it/1280x720" style="animation: xfade 16s 8s infinite;">
-			<img class="slide" src="http://placehold.it/960x540" style="animation: xfade 16s 4s infinite;">
-			<img class="slide" src="http://placehold.it/1920x1080" style="animation: xfade 16s 0s infinite;">
+			<div class="slide" id="slide1"></div>
+			<div class="slide" id="slide2"></div>
+			<div class="slide" id="slide3"></div>
+			<div class="slide" id="slide4"></div>
 		</div>
 
 		<!-- PROJECT DETAILS -->
