@@ -14,6 +14,7 @@
 
 		<script src="_js/vendor/jquery-1.11.0.min.js"></script>
     <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		<script src="blog/_js/menu.js"></script>
 		<script src="_js/vendor/p5.min.js"></script>
   	<script src="_js/splash/alpha.js" language="javascript" type="text/javascript" ></script>
 		<script src="_js/home.js"></script>
@@ -42,7 +43,7 @@
 
 		<div id="container">
 
-			<div class="item noselect" data-sr>
+			<a href="facebook" class="item" data-sr>
 				<div class="itemtext">
 					<div class="title">
 						Facebook Timeline Hallway
@@ -55,9 +56,9 @@
 					</div>
 					<div class="itemimg" style="background-image: url('_images/timelinehallway_1_280.jpg');"></div>
 				</div>
-			</div>
+			</a>
 
-			<div class="item noselect" data-sr>
+			<a href="f8" class="item" data-sr>
 				<div class="itemtext">
 					<div class="title">
 						F8 Attendee Map
@@ -70,9 +71,9 @@
 					</div>
 					<div class="itemimg" style="background-image: url('_images/f8_1_280.jpg');"></div>
 				</div>
-			</div>
+			</a>
 
-			<div class="item noselect" data-sr>
+			<a href="#" class="item" data-sr>
 				<div class="itemtext">
 					<div class="title">
 						Utah Museum of Natural History
@@ -85,9 +86,9 @@
 					</div>
 					<div class="itemimg" style="background-image: url('_images/utah_280.jpg');"></div>
 				</div>
-			</div>
+			</a>
 
-			<div class="item noselect" data-sr>
+			<a href="#"  class="item" data-sr>
 				<div class="itemtext">
 					<div class="title">
 						BackTalk
@@ -100,9 +101,9 @@
 					</div>
 					<div class="itemimg" style="background-image: url('_images/backtalk_1_280.jpg');"></div>
 				</div>
-			</div>
+			</a>
 
-			<div class="item noselect" data-sr>
+			<a href="#" class="item" data-sr>
 				<div class="itemtext">
 					<div class="title">
 						Live Singapore: Real-Time Talk
@@ -115,9 +116,9 @@
 					</div>
 					<div class="itemimg" style="background-image: url('_images/realtimetalk_280.jpg');"></div>
 				</div>
-			</div>
+			</a>
 
-			<div class="item noselect" data-sr>
+			<a href="#" class="item" data-sr>
 				<div class="itemtext">
 					<div class="title">
 						Live Singapore: Formula One City
@@ -130,7 +131,7 @@
 					</div>
 					<div class="itemimg" style="background-image: url('_images/formulaonecity_1_280.jpg');"></div>
 				</div>
-			</div>
+			</a>
 
 			<!-- FOOTER CONTAINS COPYRIGHT INFO AND PRAETORIANS EASTER EGG -->
 
@@ -138,16 +139,6 @@
 				<div id="copyright">
 					&#169; AARON SIEGEL 2004 - 2015.
 				</div>
-				<!--
-				<div id="socialmedia">
-					<a href="https://www.facebook.com/datadreamerlabs"><img src="_icons/facebook_gray.png" width="16" border="0"/></a>
-					<a href="http://www.google.com/+AaronSiegeldatadreamer"><img src="_icons/gplus_gray.png" width="16" border="0"/></a>
-					<a href="http://www.linkedin.com/profile/view?id=72172706"><img src="_icons/linkedin_gray.png" width="16" border="0"/></a>
-					<a href="http://twitter.com/datadreamer"><img src="_icons/twitter_gray.png" width="16" border="0"/></a>
-					<a href="https://vimeo.com/user352725"><img src="_icons/vimeo_gray.png" width="16" border="0"/></a>
-					<a href="http://www.youtube.com/user/alt4ir"><img src="_icons/youtube_gray.png" width="16" border="0"/></a>
-				</div>
-				-->
 				<div id="praetorians">
 					<a href="praetorians.html" class="hidden">&#960;</a>
 				</div>
@@ -161,7 +152,7 @@
 			<div id="logo" class="noselect">
 				datadreamer
 			</div>
-			<button type="button" class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<button type="button" class="btn-navbar" onclick="toggleMenu()">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -170,6 +161,245 @@
 				The work of <a href="/about">Aaron Siegel</a>
 			</div>
 		</header>
+
+		<!-- MENU IS FIXED AND DISPLAY IS TOGGLED -->
+
+		<div id="menu" class="noselect">
+			<hr>
+			<div id="menutitles">
+				<div class="menutitle" id="tweetmenutitle">
+					<div class="menutitletext">
+						Tweets
+					</div>
+				</div>
+				<div class="menutitle" id="postmenutitle">
+					<div class="vr vr2"></div>
+					<div class="menutitletext">
+						Posts
+					</div>
+				</div>
+				<div class="menutitle" id="tagmenutitle">
+					<div class="vr vr2"></div>
+					<div class="menutitletext">
+						Tags
+					</div>
+				</div>
+				<div class="menutitle" id="mainmenutitle">
+					<div class="vr vr2"></div>
+					<div class="menutitletext">
+						Menu
+					</div>
+				</div>
+			</div>
+
+
+			<div class="submenu" id="tweetmenu">
+				<a href="http://twitter.com/datadreamer/status/566482529398423553">
+					<div class="submenuitem">
+						<div class="submenutext">Enter a doctor's name; see how much $ they've gotten from big pharma. Thanks Obama. https://t.co/7BUWnB4H99</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/566062536693252097'>
+					<div class="submenuitem">
+						<div class="submenutext">@lisakori @eyebeamnyc Amazing! Congratulations!</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/565855372166971394'>
+					<div class="submenuitem">
+						<div class="submenutext">I can delete a hundred digital photos but if I throw away one polaroid I will be thinking about it for weeks.</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/565830996537266177'>
+					<div class="submenuitem">
+						<div class="submenutext">Staying up past 3am monitoring wireshark for GET requests from webapps in order to discover their data access points. #justdatadreamerthings</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/565048527990956032'>
+					<div class="submenuitem">
+						<div class="submenutext">Google docs just notified me that "smart phone" is a typo. It's officially smartphone.</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/562871696575975424'>
+					<div class="submenuitem">
+						<div class="submenutext">More government dataviz for the people: http://t.co/b6HNgecB29</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/562106720940326913'>
+					<div class="submenuitem">
+						<div class="submenutext">I had no idea california had such a rich history of license plate designs. http://t.co/RxoPQaUInh</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/559840115430678528'>
+					<div class="submenuitem">
+						<div class="submenutext">Really enjoying this map of unpermitted billboards made by the @latimes http://t.co/h4nksWsbZZ</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/557835851175297024'>
+					<div class="submenuitem">
+						<div class="submenutext">And now how about a map of Los Angeles outdoor public stairways compiled by @DougBeyerlein http://t.co/6iR8d4RNuV</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/557828365722615808'>
+					<div class="submenuitem">
+						<div class="submenutext">Great map of old Los Angeles pedestrian passages compiled by @EzraHorne. Can't wait to investigate some tunnels! https://t.co/ooySPbe5kZ</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/556987408831365120'>
+					<div class="submenuitem">
+						<div class="submenutext">Another day scripting data scrapers in python. Building up a test data set for a new mapping app I'm working on.</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/555084844997148672'>
+					<div class="submenuitem">
+						<div class="submenutext">In an effort to change my use of social media, I have relaunched my personal blog. Check out the first article: http://t.co/ZzTr8jFJyK</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/554851041892515840'>
+					<div class="submenuitem">
+						<div class="submenutext">Finally got my 4k workstation up and running after a lengthy afternoon of muttering swear words and throwing shitty manuals across the room.</div>
+					</div>
+				</a>
+				<a href='http://twitter.com/datadreamer/status/553405219824869376'>
+					<div class="submenuitem">
+						<div class="submenutext">Ten years after I wrote about it, #teledildonics focused on emotional physical stimulation. https://t.co/5f1kOPJlJJ</div>
+					</div>
+				</a>
+				<div class="submenubottom"></div>
+			</div>
+
+
+			<div class="submenu" id="postmenu">
+				<div class="vr"></div>
+				<div class="submenuitemholder">
+					<a href="#">
+						<div class="submenuitem">
+							<div class="submenutext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem">
+							<div class="submenutext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem">
+							<div class="submenutext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem">
+							<div class="submenutext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+
+			<div class="submenu" id="tagmenu">
+				<div class="vr"></div>
+				<div class="submenuitemholder">
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">app <font class="tagnum">3</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">art <font class="tagnum">6</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">data <font class="tagnum">4</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">graffiti <font class="tagnum">1</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">installation <font class="tagnum">5</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">interactive <font class="tagnum">8</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">losangeles <font class="tagnum">2</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">map <font class="tagnum">6</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">mobile <font class="tagnum">3</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">network <font class="tagnum">2</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">system <font class="tagnum">2</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">urban <font class="tagnum">4</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">visualization <font class="tagnum">3</font></div>
+						</div>
+					</a>
+					<a href="#">
+						<div class="submenuitem tagmenuitem">
+							<div class="submenutext tagmenutext">web <font class="tagnum">2</font></div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+
+			<div class="submenu" id="mainmenu">
+				<div class="vr"></div>
+				<div class="submenuitemholder">
+					<a href="/">
+						<div class="submenuitem mainmenuitem">
+							<div class="submenutext mainmenutext">Home</div>
+						</div>
+					</a>
+					<a href="http://datadreamer.com/blog">
+						<div class="submenuitem mainmenuitem">
+							<div class="submenutext mainmenutext">Blog</div>
+						</div>
+					</a>
+					<a href="http://datadreamer.com/about">
+						<div class="submenuitem mainmenuitem">
+							<div class="submenutext mainmenutext">About</div>
+						</div>
+					</a>
+					<a href="http://datadreamer.com/contact">
+						<div class="submenuitem mainmenuitem">
+							<div class="submenutext mainmenutext">Contact</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+
+		</div>
 
 
 		<script src="_js/vendor/scrollReveal.min.js"></script>
