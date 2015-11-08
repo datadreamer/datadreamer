@@ -481,12 +481,11 @@ footer{
 	color:#fff;
 }
 .submenutext{
-  float: left;
 	display: inline-block;
-    vertical-align: middle;
+  vertical-align: middle;
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	font-size: 10px;
-    line-height: 11px;
+  line-height: 11px;
 	font-weight: 500;
 	color: #ccc;
 	text-decoration: none;
@@ -514,7 +513,7 @@ footer{
 .tagmenutext{
 	font-family: 'DINLightRegular', Helvetica, Arial, sans-serif;
 	font-size: 18px;
-	line-height: 38px;
+	line-height: 18px;
 	font-weight: 100;
 	color: #fff;
 	text-transform: uppercase;
@@ -689,6 +688,7 @@ hr {
 	}
 	.tagmenutext{
 		font-size: 24px;
+		line-height: 24px;
 	}
 }
 
@@ -748,6 +748,6 @@ hr {
 	.tagmenutext{
 		max-height: 50px;
 		font-size: 24px;
-		line-height: 48px;
+		line-height: 24px;
 	}
 }
