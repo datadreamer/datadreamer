@@ -95,7 +95,7 @@
           $num = $row['num'];
           echo "<a href='/blog/tag/{$tag}'>";
           echo "<div class='submenuitem tagmenuitem'>";
-          echo "<div class='submenutext tagmenutext'>{$tag} <font class='tagnum'>{$num}</font></div>";
+          echo "<div class='submenutext tagmenutext'>{$tag} <span class='tagnum'>{$num}</span></div>";
           echo "</div></a>";
         }
       ?>
