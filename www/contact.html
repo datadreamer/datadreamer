@@ -19,6 +19,40 @@
 
 	<body>
 
+		<style>
+			.slide{
+				animation: fadeInAnimation 2s;
+				-webkit-animation: fadeInAnimation 2s;
+				-webkit-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+			}
+			#slide1{
+				background-image: url('_images/contact_1_590.jpg');
+			}
+			@media only screen and (min-width: 590px){
+				#slide1{background-image:url('_images/contact_1_900.jpg');}
+			}
+			@media only screen and (min-width: 900px){
+				#slide1{background-image:url('_images/contact_1_1210.jpg');}
+			}
+			@media only screen and (min-width: 1210px){
+				#slide1{background-image:url('_images/contact_1_1520.jpg');}
+			}
+			@media only screen and (min-width: 1520px){
+				#slide1{background-image:url('_images/contact_1_1830.jpg');}
+			}
+			@media only screen and (min-width: 1830px){
+				#slide1{background-image:url('_images/contact_1_2140.jpg');}
+			}
+			@media only screen and (min-width: 2140px){
+				#slide1{background-image:url('_images/contact_1_2450.jpg');}
+			}
+		</style>
+
+		<div id="slideshow">
+			<div class="slide" id="slide1"></div>
+		</div>
+
 		<!-- CONTAINER HOLDS ITEMS -->
 
 		<div id="content">
