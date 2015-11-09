@@ -2,7 +2,6 @@
 <html class="no-js">
 	<head>
 		<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>datadreamer - contact aaron siegel</title>
 		<meta name="description" content="Computational information design, interactive art, and data visualization created over the past decade by Aaron Siegel.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
