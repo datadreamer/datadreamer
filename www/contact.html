@@ -7,10 +7,11 @@
 		<meta name="description" content="Computational information design, interactive art, and data visualization created over the past decade by Aaron Siegel.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" type="text/css" href="_css/normalize.min.css">
+		<link rel="stylesheet" type="text/css" href="_css/normalize.min.css" />
 		<link rel="stylesheet" type="text/css" href="_css/fonts.css" />
-		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' />
 		<link rel="stylesheet" type="text/css" href="_css/sitenew.css" />
+		<link rel="stylesheet" type="text/css" href="_css/contact.css" />
 
 		<script src="_js/vendor/jquery-1.11.0.min.js"></script>
     <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -18,80 +19,6 @@
 	</head>
 
 	<body>
-
-		<style>
-			.slide{
-				animation: fadeInAnimation 2s;
-				-webkit-animation: fadeInAnimation 2s;
-				-webkit-animation-fill-mode: forwards;
-				animation-fill-mode: forwards;
-			}
-			#slide1{
-				background-image: url('_images/contact_1_590.jpg');
-			}
-			@media only screen and (min-width: 590px){
-				#slide1{background-image:url('_images/contact_1_900.jpg');}
-			}
-			@media only screen and (min-width: 900px){
-				#slide1{background-image:url('_images/contact_1_1210.jpg');}
-			}
-			@media only screen and (min-width: 1210px){
-				#slide1{background-image:url('_images/contact_1_1520.jpg');}
-			}
-			@media only screen and (min-width: 1520px){
-				#slide1{background-image:url('_images/contact_1_1830.jpg');}
-			}
-			@media only screen and (min-width: 1830px){
-				#slide1{background-image:url('_images/contact_1_2140.jpg');}
-			}
-			@media only screen and (min-width: 2140px){
-				#slide1{background-image:url('_images/contact_1_2450.jpg');}
-			}
-		</style>
-
-		<div id="slideshow">
-			<div class="slide" id="slide1"></div>
-		</div>
-
-		<!-- CONTAINER HOLDS ITEMS -->
-
-		<div id="content">
-			<div id="projecttitle" data-sr>
-				<h1>Contact</h1>
-			</div>
-			<div id="projectbody">
-
-				<div style="clear:both;">
-					<form name="contact" action="contact.php" method="post">
-						<div id="contactleft">
-							<label for="name">Name:</label>
-							<input class="items" type="text" id="name" name="name"><br/>
-							<label for="from">Email:</label>
-							<input class="items" type="email" id="from" name="from"><br/>
-							<label for="subject">Subject:</label>
-							<input class="items" type="text" id="subject" name="subject"><br/>
-						</div>
-						<div id="contactright">
-							<label for="message">Message:</label>
-							<textarea class="items" id="message" name="message" rows="20" cols="50"></textarea><br/><br/>
-							<input type="submit" value="Send"><br/>
-						</div>
-					</form>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- FOOTER CONTAINS COPYRIGHT INFO AND PRAETORIANS EASTER EGG -->
-
-		<footer data-sr>
-			<div id="copyright">
-				&#169; AARON SIEGEL 2004 - 2015.
-			</div>
-			<div id="praetorians">
-				<a href="praetorians.html" class="hidden">&#960;</a>
-			</div>
-		</footer>
 
 		<!-- HEADER CONTAINS TITLE AND MENU -->
 
@@ -321,7 +248,7 @@
 
 			<div class="submenu" id="mainmenu">
 				<div class="vr"></div>
-				<div class="submenuitemholder">
+				<nav class="submenuitemholder">
 					<a href="/">
 						<div class="submenuitem mainmenuitem">
 							<div class="submenutext mainmenutext">Home</div>
@@ -342,11 +269,55 @@
 							<div class="submenutext mainmenutext">Contact</div>
 						</div>
 					</a>
-				</div>
+				</nav>
 			</div>
 
 
 		</div>
+
+		<div id="slideshow">
+			<div class="slide" id="slide1"></div>
+		</div>
+
+		<!-- CONTAINER HOLDS ITEMS -->
+
+		<div id="content">
+			<div id="projecttitle" data-sr>
+				<h1>Contact</h1>
+			</div>
+			<div id="projectbody">
+
+				<div style="clear:both;">
+					<form name="contact" action="contact.php" method="post">
+						<div id="contactleft">
+							<label for="name">Name:</label>
+							<input class="items" type="text" id="name" name="name"><br/>
+							<label for="from">Email:</label>
+							<input class="items" type="email" id="from" name="from"><br/>
+							<label for="subject">Subject:</label>
+							<input class="items" type="text" id="subject" name="subject"><br/>
+						</div>
+						<div id="contactright">
+							<label for="message">Message:</label>
+							<textarea class="items" id="message" name="message" rows="20" cols="50"></textarea><br/><br/>
+							<input type="submit" value="Send"><br/>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- FOOTER CONTAINS COPYRIGHT INFO AND PRAETORIANS EASTER EGG -->
+
+		<footer data-sr>
+			<div id="copyright">
+				&#169; AARON SIEGEL 2004 - 2015.
+			</div>
+			<div id="praetorians">
+				<a href="praetorians.html" class="hidden">&#960;</a>
+			</div>
+		</footer>
 
 		<script src="_js/vendor/scrollReveal.min.js"></script>
 		<script>
