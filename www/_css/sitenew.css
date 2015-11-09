@@ -196,7 +196,7 @@ footer{
   top: 0;
   left: 0;
   width: 100%;
-  padding-bottom: 41.88%;
+  padding-bottom: 41.84%;
   background-size: contain;
   opacity: 0;
 }
@@ -229,9 +229,15 @@ footer{
 	height: 26px;
 	margin: 5px 10px 10px 10px;
 	float: left;
-	color: #ffffff;
+	color: #fff;
 	font-family: 'BauhausRegular';
 	font-size: 36px;
+}
+#logo a{
+  color: #fff;
+}
+#logo a:visited{
+  color: #fff;
 }
 
 #sublogo{
@@ -389,6 +395,25 @@ footer{
 #praetorians{
   margin: 10px;
   float: right;
+}
+
+
+/* CONTACT PAGE STYLES */
+
+#contactleft{
+
+}
+#contactright{
+  margin-bottom: 20px;
+}
+label{
+  display: block;
+}
+input{
+  width: 100%;
+}
+textarea{
+  width: 100%;
 }
 
 /* ANIMATIONS */
@@ -666,6 +691,15 @@ hr {
     -moz-column-count: 2;
     column-count: 2;
   }
+  #contactleft{
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+  }
+  #contactright{
+    float: left;
+    width: 49%;
+  }
 }
 
 @media only screen and (min-width: 720px) {		/* three */
@@ -700,6 +734,16 @@ hr {
 		font-size: 24px;
 		line-height: 24px;
 	}
+
+  #contactleft{
+    float: left;
+    width: 29%;
+    margin-right: 2%;
+  }
+  #contactright{
+    float: left;
+    width: 69%;
+  }
 }
 
 @media only screen and (min-width: 960px) {
