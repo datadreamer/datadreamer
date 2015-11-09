@@ -14,7 +14,7 @@
 
 		<script src="_js/vendor/jquery-1.11.0.min.js"></script>
     <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-		<script src="blog/_js/menu.js"></script>
+		<script src="_js/menu.js"></script>
 	</head>
 
 	<body>
