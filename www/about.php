@@ -20,6 +20,7 @@
 	<body>
 
 		<?php
+			include("_php/connect.php");
 			include_once("analyticstracking.php");
 			include("_php/header.php");
 		?>
