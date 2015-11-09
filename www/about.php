@@ -50,5 +50,10 @@
 			include("_html/footer.html");
 		?>
 
+		<script src="_js/vendor/scrollReveal.min.js"></script>
+		<script>
+      window.sr = new scrollReveal();
+    </script>
+
 	</body>
 </html>
