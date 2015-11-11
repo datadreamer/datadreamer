@@ -531,8 +531,8 @@ textarea{
 }
 .submenubottom{
 	float: left;
-	height: 100px;
-	clear: both;
+  width: 100%;
+	height: 82px;
 }
 
 
