@@ -1,158 +1,97 @@
 <?php
-
-/* this does user agent checking */
- 
-function lite_detection() {
-  if (isset($_SERVER['HTTP_X_WAP_PROFILE']) ||
-      isset($_SERVER['HTTP_PROFILE'])) {
-    return true;
+  ini_set('display_errors', 'On');
+  error_reporting(E_ALL | E_STRICT);
+  // query database to get item details
+  $conn = mysqli_connect("localhost", "asiegel_web", "buttslol!", "asiegel_site");
+  if(!$conn){
+    die("Connection failed: " . mysqli_connect_error());
   }
-  $user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
-  if (in_array(substr($user_agent, 0, 4), lite_detection_ua_prefixes())) {
-    return true;
+  if(!empty($_GET["item"])){
+    $item = mysqli_real_escape_string($conn, $_GET["item"]);
+    $result = mysqli_query($conn, "SELECT * FROM items WHERE id='{$item}'");
+  } else if(!empty($_GET["name"])){
+    $name = mysqli_real_escape_string($conn, $_GET["name"]);
+    $result = mysqli_query($conn, "SELECT * FROM items WHERE shortname='{$name}'");
   }
-  $accept = strtolower($_SERVER['HTTP_ACCEPT']);
-  if (strpos($accept, 'wap') !== false) {
-    return true;
-  }
-  if (preg_match("/(" . lite_detection_ua_contains() . ")/i", $user_agent)) {
-    return true;
-  }
-  if (isset($_SERVER['ALL_HTTP']) && strpos(strtolower($_SERVER['ALL_HTTP']), 'operamini') !== false) {
-    return true;
-  }
-  return false;
-}
- 
-function lite_detection_ua_prefixes() {
-  return array( 'w3c ', 'w3c-', 'acs-', 'alav', 'alca', 'amoi', 'audi', 'avan', 'benq', 'bird', 'blac',
-    'blaz', 'brew', 'cell', 'cldc', 'cmd-', 'dang', 'doco', 'eric', 'hipt', 'htc_', 'inno', 'ipaq', 'ipod',
-    'jigs', 'kddi', 'keji', 'leno', 'lg-c', 'lg-d', 'lg-g', 'lge-', 'lg/u', 'maui', 'maxo', 'midp', 'mits',
-    'mmef', 'mobi', 'mot-', 'moto', 'mwbp', 'nec-', 'newt', 'noki', 'palm', 'pana', 'pant', 'phil', 'play',
-    'port', 'prox', 'qwap', 'sage', 'sams', 'sany', 'sch-', 'sec-', 'send', 'seri', 'sgh-', 'shar', 'sie-',
-    'siem', 'smal', 'smar', 'sony', 'sph-', 'symb', 't-mo', 'teli', 'tim-', 'tosh', 'tsm-', 'upg1', 'upsi',
-    'vk-v', 'voda', 'wap-', 'wapa', 'wapi', 'wapp', 'wapr', 'webc', 'winw', 'winw', 'xda ', 'xda-',
-  );
-}
- 
-function lite_detection_ua_contains() {
-  return implode("|", array(
-    'android', 'blackberry', 'hiptop', 'ipod', 'lge vx', 'midp', 'maemo', 'mmp', 'netfront', 'nintendo DS',
-    'novarra', 'openweb', 'opera mobi', 'opera mini', 'palm', 'psp', 'phone', 'smartphone', 'symbian',
-    'up.browser', 'up.link', 'wap', 'windows ce',
-  ));
-}
-
-
-// query database to get item details
-$item = mysql_escape_string($_GET["item"]);
-$db = mysql_connect("localhost", "asiegel_web", "buttslol!") or die("Failed to connect to server.");
-mysql_select_db("asiegel_site") or die("Failed to select database.");
-$result = mysql_query("SELECT * FROM items WHERE id={$item}");
-$row = mysql_fetch_array($result);
+  $itemrow = mysqli_fetch_assoc($result);
+  $item = $itemrow['shortname'];
 ?>
 
 <!DOCTYPE html>
 <html class="no-js">
 	<head>
 		<meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>datadreamer - <?php echo $row[1]; ?></title>
-		<meta name="description" content="Computational information design, interactive art, and data visualizations created over the past decade by Aaron Siegel.">
-		<?php
-			if(lite_detection()){
-				// use this to force the viewport of all detected mobile devices to 320px wide.
-				echo "<meta name=\"viewport\" content=\"target-densitydpi=device-dpi, width=320\"/>";
-				//echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
-			} else {
-				echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
-			}
-		?>
-		
-		<link rel="stylesheet" href="_css/normalize.min.css">
-		<link rel="stylesheet" href="_css/fonts.css" />
-		<link rel="stylesheet" href="_css/site.css" />
+    <?php
+		  echo "<title>datadreamer - {$itemrow['title']}</title>\n";
+    ?>
+		<meta name="description" content="Interaction design, media art, and data visualizations created over the past decade by Aaron Siegel.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!--
-		<script src="_js/jquery-1.9.1.min.js"></script>
-		<script src="_js/jquery.masonry.min.js"></script>
-		<script src="_js/jquery.waitforimages.js"></script>
-		-->
-		
+		<link rel="stylesheet" type="text/css" href="_css/normalize.min.css" />
+		<link rel="stylesheet" type="text/css" href="_css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' />
+		<link rel="stylesheet" type="text/css" href="_css/sitenew.css" />
+		<link rel="stylesheet" type="text/css" href="_css/about.css" />
+
 		<script src="_js/vendor/jquery-1.11.0.min.js"></script>
-		<script src="_js/jquery.waitforimages.js"></script>
-        <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-		<script src="_js/site.js"></script>
-		
-		<script>
-			<?php
-				echo "type = '{$row[12]}';";
-				echo "item = '{$row[7]}';";
-				if(!empty($row[9])){
-					echo "var videoAspectRatio = {$row[10]};";
-				}
-			?>
-		</script>
-		
-		<?php
-			echo "<script src=\"_js/processing.min.js\"></script>";
-		?>
-		
+    <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		<script src="_js/menu.js"></script>
 	</head>
-	
+
 	<body>
-		
+
 		<?php
 			include_once("analyticstracking.php");
-			include("_html/header.html");
+			include("_php/header.php");
+      include("_php/slideshow.php");
 		?>
-		
-		<div id="gallery">
-			<div id="galleryimage">
-				<div class="slideshow" id="slideshow">
-					
+
+    <div id="content">
+			<div id="projecttitle" data-sr>
+				<?php
+					echo "<h1>{$itemrow['title']}</h1>";
+				?>
+			</div>
+      <div id="projectdeets" data-sr>
+				<div id="projectdate">
+          <?php
+  					echo strtoupper($itemrow['dt']);
+  				?>
+        </div>
+        <div id="projecttags">
+					<!-- tags go here -->
 				</div>
-			</div>
-		</div>
-		
-		<div id="contentcontainer">
-			<div id="contenttitle">
-				<?php
-					echo $row[1];
+        <?php
+					if(!empty($itemrow['location'])){
+            echo "<a href='{$itemrow['location']}' id='projectlink'>Enter Project &raquo</a>";
+          }
 				?>
-			</div>
-			<div id="contentdate">
-				<?php
-					echo strtoupper($row[2]);
-				?>
-			</div>
-			<div id="contenttext">
-				<?php
-					echo $row[4];
-				?>
-			</div>
-			<div id="contentlink">
-				<?php
-					if(!empty($row[5])){
-						echo "<a class='title' href='{$row[5]}'>Enter Project</a>";
-					}
-				?>
+      </div>
+			<div id="projectbody">
+        <p class="projectbodytext" data-sr>
+          <?php
+            echo $itemrow['longdesc'];
+          ?>
+        </p>
+
+    		<?php
+    			if(!empty($itemrow['videocode'])){
+    				echo "<div class='projectvideo' data-sr>";
+    				echo "<iframe class='videoframe' src='" . $itemrow['videocode'] . "' frameborder='0' allowfullscreen></iframe>";
+    				echo "</div>";
+    			}
+    		?>
 			</div>
 		</div>
 
-		<?php
-			if(!empty($row[9])){
-				echo "<div id=\"videocontainer\">";
-				echo "<div id=\"video\">";
-				echo "<iframe id=\"videoframe\" src=\"{$row[9]}\" frameborder=\"0\" allowfullscreen></iframe>";
-				echo "</div></div>";
-			}
-		?>
-		
 		<?php
 			include("_html/footer.html");
 		?>
-		
-	</body>
 
+    <script src="_js/vendor/scrollReveal.min.js"></script>
+		<script>
+      window.sr = new scrollReveal();
+    </script>
+
+	</body>
 </html>
