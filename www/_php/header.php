@@ -1,3 +1,16 @@
+<?php
+  $conn = mysqli_connect("localhost", "asiegel_web", "buttslol!", "asiegel_blog");
+  if(!$conn){
+    die("Connection failed: " . mysqli_connect_error());
+  }
+  // prep twitter stuff
+  require_once 'vendor/twitter/twitter.class.php';
+  // ENTER HERE YOUR CREDENTIALS (see credentials.txt)
+  $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+  $statuses = $twitter->load(Twitter::ME,30);
+  date_default_timezone_set('America/Los_Angeles');
+?>
+
 <!-- HEADER CONTAINS TITLE AND MENU -->
 
 <header>
@@ -66,8 +79,8 @@
     <div class="submenuitemholder">
       <?php
         // list all blog posts as buttons to open permalinks.
-        $result = mysql_query("SELECT title,link,r,g,b FROM posts ORDER BY id DESC");
-        while($row = mysql_fetch_assoc($result)){
+        $result = mysqli_query($conn, "SELECT title,link,r,g,b FROM posts ORDER BY id DESC");
+        while($row = mysqli_fetch_assoc($result)){
           $title = $row['title'];
           $link = $row['link'];
           $r = $row['r'];
@@ -89,8 +102,8 @@
     <div class="submenuitemholder">
       <?php
         // list all tags as buttons to open list of relavent posts.
-        $result = mysql_query("SELECT tag, count(tag) AS num FROM tags GROUP BY tag ORDER BY tag ASC");
-        while($row = mysql_fetch_assoc($result)){
+        $result = mysqli_query($conn, "SELECT tag, count(tag) AS num FROM tags GROUP BY tag ORDER BY tag ASC");
+        while($row = mysqli_fetch_assoc($result)){
           $tag = $row['tag'];
           $num = $row['num'];
           echo "<a href='/blog/tag/{$tag}'>";
@@ -131,3 +144,7 @@
   </div>
 
 </div>
+
+<?php
+  mysqli_close($conn);
+?>
