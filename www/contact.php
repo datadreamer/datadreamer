@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>datadreamer - contact aaron siegel</title>
-		<meta name="description" content="Computational information design, interactive art, and data visualization created over the past decade by Aaron Siegel.">
+		<meta name="description" content="Interaction design, media art, and data visualizations created over the past decade by Aaron Siegel.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" type="text/css" href="_css/normalize.min.css" />
@@ -21,7 +21,7 @@
 
 		<?php
 			include_once("analyticstracking.php");
-			include("_html/header.php");
+			include("_php/header.php");
 		?>
 
 		<div id="slideshow">
@@ -76,7 +76,7 @@
 				    // Check if "from" email address is valid
 				    $mailcheck = spamcheck($_POST["from"]);
 				    if ($mailcheck==FALSE) {
-				    	echo "<p class="projectbodytext">Invalid input.</p>";
+				    	echo "<p class=\"projectbodytext\">Invalid input.</p>";
 				    } else {
 				    	$name = $_POST["name"];
 			      	$from = $_POST["from"]; 		// sender
@@ -86,7 +86,7 @@
 			      	$message = wordwrap($message, 70);
 			      	// send mail
 			      	mail("datadreamerlabs@gmail.com", $subject, $message, "From: $name <$from>\n");
-			      	echo "<p class="projectbodytext">";
+			      	echo "<p class=\"projectbodytext\">";
 			      	echo "Thanks for getting in touch. You'll hear back from me soon. In the meantime, <a href='/'>check out some more projects</a>!";
 			      	echo "</p>";
 				    }
