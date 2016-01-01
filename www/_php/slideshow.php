@@ -34,7 +34,7 @@
     $totalsecs = $numslides*4;
     $delaysecs = $i*4;
     echo "#slide{$nexti}{\n";
-    echo "background-image: url('_images/{$resolutions[0][$i]}');\n";
+    echo "background-image: url('/_images/{$resolutions[0][$i]}');\n";
     echo "animation: xfade {$totalsecs}s linear {$delaysecs}s infinite;\n";
     echo "}\n\n";
   }
@@ -46,7 +46,7 @@
     echo "@media only screen and (min-width: {$breaks[$lasti]}px){\n";
     for($n=0; $n<count($resolutions[$i]); $n++){
       $nextn = $n+1;
-      echo "#slide{$nextn}{background-image:url('_images/{$resolutions[$i][$n]}');}\n";
+      echo "#slide{$nextn}{background-image:url('/_images/{$resolutions[$i][$n]}');}\n";
     }
     echo "}\n\n";
   }

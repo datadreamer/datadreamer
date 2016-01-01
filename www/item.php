@@ -27,15 +27,15 @@
 		<meta name="description" content="Interaction design, media art, and data visualizations created over the past decade by Aaron Siegel.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" type="text/css" href="_css/normalize.min.css" />
-		<link rel="stylesheet" type="text/css" href="_css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="/_css/normalize.min.css" />
+		<link rel="stylesheet" type="text/css" href="/_css/fonts.css" />
 		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' />
-		<link rel="stylesheet" type="text/css" href="_css/sitenew.css" />
-		<link rel="stylesheet" type="text/css" href="_css/about.css" />
+		<link rel="stylesheet" type="text/css" href="/_css/sitenew.css" />
+		<link rel="stylesheet" type="text/css" href="/_css/about.css" />
 
-		<script src="_js/vendor/jquery-1.11.0.min.js"></script>
-    <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-		<script src="_js/menu.js"></script>
+		<script src="/_js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="/_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		<script src="/_js/menu.js"></script>
 	</head>
 
 	<body>
@@ -63,7 +63,7 @@
 				</div>
         <?php
 					if(!empty($itemrow['location'])){
-            echo "<a href='{$itemrow['location']}' id='projectlink'>Enter Project &raquo</a>";
+            echo "<a href='/{$itemrow['location']}' id='projectlink'>Enter Project &raquo</a>";
           }
 				?>
       </div>
@@ -88,7 +88,7 @@
 			include("_html/footer.html");
 		?>
 
-    <script src="_js/vendor/scrollReveal.min.js"></script>
+    <script src="/_js/vendor/scrollReveal.min.js"></script>
 		<script>
       window.sr = new scrollReveal();
     </script>
