@@ -27,6 +27,11 @@
 		<script src="_js/vendor/p5.min.js"></script>
   	<script src="_js/splash/alpha.js"></script>
 		<script src="_js/home.js"></script>
+    <style>
+      header{
+        display: none;
+      }
+    </style>
 	</head>
 
 	<body>
@@ -93,8 +98,17 @@
 		</div>
 
     <script src="_js/vendor/scrollReveal.min.js"></script>
-		<script>
+    <script>
       window.sr = new scrollReveal();
+			$(function(){
+				$(window).scroll(function(){
+					if ($(this).scrollTop() > 100) {
+                $('header').fadeIn();
+            } else {
+                $('header').fadeOut();
+            }
+				});
+			});
     </script>
 
 	</body>
