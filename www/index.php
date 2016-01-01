@@ -26,7 +26,6 @@
 
 		<script src="_js/vendor/p5.min.js"></script>
   	<script src="_js/splash/alpha.js"></script>
-		<script src="_js/home.js"></script>
     <style>
       header{
         display: none;
