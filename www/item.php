@@ -63,7 +63,7 @@
 				</div>
         <?php
 					if(!empty($itemrow['location'])){
-            echo "<a href='/{$itemrow['location']}' id='projectlink'>Enter Project &raquo</a>";
+            echo "<a href='{$itemrow['location']}' id='projectlink'>Enter Project &raquo</a>";
           }
 				?>
       </div>
