@@ -1,6 +1,8 @@
 var points = []
 var deadpoints = [];
 var connectRadius = 0.25;
+var lastRelease = 0;
+var releaseRate = 1000;
 
 function setup(){
   var canvas = createCanvas(windowWidth, windowHeight);
@@ -37,6 +39,11 @@ function draw(){
       points.splice(index, 1);
     }
   }
+  // see if it's time to spawn a new Point
+  if(millis() - lastRelease > releaseRate){
+    points.push(new Point(random(windowWidth), random(windowHeight)));
+    lastRelease = millis();
+  }
   deadpoints = [];
 }
 
@@ -49,7 +56,7 @@ function getMouseY(){
 }
 
 function mousePressed(){
-  points.push(new Point());
+  points.push(new Point(mouseX, mouseY));
 }
 
 function windowResized(){
@@ -59,15 +66,15 @@ function windowResized(){
 
 /* CLASSES */
 
-function Point(){
+function Point(x, y){
   this.birth = millis();
   this.death = 0;
   this.lifespan = random(2000, 5000);
   this.deathspan = 1000;
   this.dead = false;
   this.dying = false;
-  this.x = mouseX;
-  this.y = mouseY;
+  this.x = x;
+  this.y = y;
   this.d = random(0.5, 3);
   this.xvec = random(-2,2);
   this.yvec = random(-2,2);
