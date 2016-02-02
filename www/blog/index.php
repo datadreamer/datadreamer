@@ -11,7 +11,6 @@
 
 
 	// ENTER HERE YOUR CREDENTIALS (see credentials.txt)
-	
 
 	$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 
@@ -54,7 +53,7 @@
 		<script src='/_js/jquery.fittext.js'></script>
 		<script src='/blog/_js/menu.js'></script>
 	</head>
-	
+
 	<body>
 
 		<?php
@@ -62,7 +61,7 @@
 		?>
 
 		<!-- HEADER -->
-		
+
 		<div id="header" class="noselect">
 			<div id="logo">
 				<a class="logo" href="/">datadreamer</a>
@@ -170,6 +169,11 @@
 				<a href="http://datadreamer.com/blog">
 					<div class="submenuitem mainmenuitem">
 						<div class="submenutext mainmenutext">Blog</div>
+					</div>
+				</a>
+				<a href="http://datadreamer.com/dailies">
+					<div class="submenuitem mainmenuitem">
+						<div class="submenutext mainmenutext">Dailies</div>
 					</div>
 				</a>
 				<a href="http://datadreamer.com/about">

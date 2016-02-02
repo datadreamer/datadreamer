@@ -130,6 +130,11 @@
           <div class="submenutext mainmenutext">Blog</div>
         </div>
       </a>
+      <a href="http://datadreamer.com/dailies">
+        <div class="submenuitem mainmenuitem">
+          <div class="submenutext mainmenutext">Dailies</div>
+        </div>
+      </a>
       <a href="http://datadreamer.com/about">
         <div class="submenuitem mainmenuitem">
           <div class="submenutext mainmenutext">About</div>
