@@ -52,22 +52,7 @@
 
 				?>
 
-				<div style="clear:both;">
-					<form name="contact" action="contact.php" method="post">
-						<div id="contactleft">
-							<label for="name">Name:</label>
-							<input class="items" type="text" id="name" name="name"><br/>
-							<label for="from">Email:</label>
-							<input class="items" type="email" id="from" name="from"><br/>
-							<label for="subject">Subject:</label>
-							<input class="items" type="text" id="subject" name="subject"><br/>
-						</div>
-						<div id="contactright">
-							<label for="message">Message:</label>
-							<textarea class="items" id="message" name="message" rows="20" cols="50"></textarea><br/><br/>
-							<input type="submit" value="Send"><br/>
-						</div>
-					</form>
+				<div id="formdiv" style="clear:both;">
 				</div>
 
 				<?php
@@ -104,6 +89,11 @@
 		<script src="_js/vendor/scrollReveal.min.js"></script>
 		<script>
       window.sr = new scrollReveal();
+			$(function() {
+				$.get("form.html", function(data){
+						$("#formdiv").html(data);
+				});
+			});
     </script>
 
 	</body>
