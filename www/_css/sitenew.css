@@ -283,6 +283,7 @@ footer{
 	font-size: 24px;
   font-weight: 700;
   line-height: 1.1em;
+  letter-spacing: -0.05em;
   color: #fff;
   opacity: 0;
   animation-name: fadeInAnimation;
