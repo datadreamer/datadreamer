@@ -37,6 +37,7 @@ a.hidden:hover{
 h1{
   font-size: 18px;
   margin: 10px;
+  letter-spacing: -0.05em;
 }
 
 footer{
@@ -587,6 +588,7 @@ textarea{
 	line-height: 31px;
 	font-weight: 700;
 	color: #fff;
+  letter-spacing: -0.05em;
 	/*text-transform: uppercase;*/
 }
 
