@@ -24,8 +24,15 @@
     <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		<script src="_js/menu.js"></script>
 
-		<script src="_js/vendor/p5.min.js"></script>
-  	<script src="_js/splash/charlie.js"></script>
+    <script src="_js/vendor/three.min.js"></script>
+    <script src="_js/vendor/CopyShader.js"></script>
+    <script src="_js/vendor/SMAAShader.js"></script>
+    <script src="_js/vendor/EffectComposer.js"></script>
+    <script src="_js/vendor/SMAAPass.js"></script>
+    <script src="_js/vendor/RenderPass.js"></script>
+    <script src="_js/vendor/MaskPass.js"></script>
+    <script src="_js/vendor/ShaderPass.js"></script>
+
     <style>
       header{
         display: none;
@@ -95,6 +102,8 @@
   		?>
 
 		</div>
+
+    <script src="_js/splash/delta.js"></script>
 
     <script src="_js/vendor/scrollReveal.min.js"></script>
     <script>
