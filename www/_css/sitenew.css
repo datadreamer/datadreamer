@@ -47,7 +47,7 @@ footer{
   height: 30px;
   background-color: #666;
   color: #fff;
-  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 10px;
   /*margin-top: 0.25%;*/
 }
@@ -73,8 +73,9 @@ footer{
 }
 
 .item:hover .itemimg{
-  filter: grayscale(0%);
-  -webkit-filter: grayscale(0%);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
   opacity: 0.8;
 }
 
@@ -98,7 +99,7 @@ footer{
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);/*rgba(50, 50, 50, 0.2);*/
+  /*background-color: rgba(0,0,0,0.5);*//*rgba(50, 50, 50, 0.2);*/
   -webkit-transition: background 300ms;
   -moz-transition: background 300ms;
   -ms-transition: background 300ms;
@@ -116,20 +117,22 @@ footer{
 	width: 100%;
 	height: 100%;
   z-index: -1;
+  /*
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
   filter: gray;
   -webkit-filter: grayscale(1);
+  */
   -webkit-transition: -webkit-filter 300ms linear, opacity 300ms;
   opacity: 1;
 }
 
 .title{
-  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1em;
   padding: 10px;
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: opacity 300ms;
   -moz-transition: opacity 300ms;
   -ms-transition: opacity 300ms;
@@ -139,10 +142,10 @@ footer{
 
 .date{
   text-transform: uppercase;
-  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 10px;
   padding: 0px 10px 0px 10px;
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: opacity 300ms;
   -moz-transition: opacity 300ms;
   -ms-transition: opacity 300ms;
@@ -250,7 +253,7 @@ footer{
 	color: #666666;
 	margin: 10px;
   text-transform: uppercase;
-  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 10px;
 }
 
@@ -275,7 +278,7 @@ footer{
   width: 100%;
   height: 25vh;
   margin: 0px;
-  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 24px;
   font-weight: 700;
   line-height: 1.1em;
@@ -288,6 +291,7 @@ footer{
   animation-delay: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  pointer-events:none;
 }
 
 #splashtext p{
@@ -337,7 +341,7 @@ footer{
 
 #projecttitle{
   float: left;
-  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
   width: 100%;
@@ -353,7 +357,7 @@ footer{
 #projectdate{
   float: left;
   text-transform: uppercase;
-  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 10px;
   margin: 0 0 10px 10px;
 }
@@ -367,7 +371,7 @@ footer{
 }
 
 #projectlink{
-  font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 10px;
   float: left;
@@ -555,7 +559,7 @@ textarea{
 	border-bottom: none;
 }
 .tagmenutext{
-	font-family: 'DINLightRegular', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 18px;
 	font-weight: 100;
@@ -578,12 +582,12 @@ textarea{
 	border-bottom: none;
 }
 .mainmenutext{
-	font-family: 'DINMediumRegular', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 30px;
 	line-height: 31px;
 	font-weight: 700;
 	color: #fff;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 
@@ -759,6 +763,7 @@ hr {
 
 @media only screen and (min-width: 960px) {
 
+
 	/* menu titles */
 	.menutitle{
 		width: 25%;
@@ -788,6 +793,12 @@ hr {
   	font-size: 64px;
   }
 
+  .item{
+    width: 24.75%;
+    margin: 0.125%;
+    padding: 0px;
+  }
+
   /* menus */
 	.submenuitem {
 		height: 60px;
@@ -815,4 +826,12 @@ hr {
 		font-size: 24px;
 		line-height: 24px;
 	}
+}
+
+@media only screen and (min-width: 1600px){
+  .item{
+    width: 19.8%;
+    margin: 0.1%;
+    padding: 0px;
+  }
 }
