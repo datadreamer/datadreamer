@@ -37,7 +37,7 @@ a.hidden:hover{
 h1{
   font-size: 18px;
   margin: 10px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
 }
 
 footer{
@@ -283,7 +283,7 @@ footer{
 	font-size: 24px;
   font-weight: 700;
   line-height: 1.1em;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   color: #fff;
   opacity: 0;
   animation-name: fadeInAnimation;
@@ -589,7 +589,7 @@ textarea{
 	line-height: 31px;
 	font-weight: 700;
 	color: #fff;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
 	/*text-transform: uppercase;*/
 }
 

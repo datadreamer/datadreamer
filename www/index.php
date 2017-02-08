@@ -76,7 +76,7 @@
         }
 				//$result = mysql_query("SELECT * FROM items ORDER BY realdate DESC");
 				//$result = mysql_query("SELECT items.id, items.title, items.dt, items.shortdesc, items.category, images.thumb, images.bwthumb FROM items JOIN images ON items.shortname=images.name WHERE items.visible=TRUE AND images.num=1 ORDER BY items.realdate DESC");
-        $result = mysqli_query($conn, "SELECT items.id, items.title, items.dt, items.shortdesc, items.category, images.thumb, items.shortname FROM items JOIN images ON items.shortname=images.name WHERE items.visible=TRUE AND images.num=1 ORDER BY items.realdate DESC");
+        $result = mysqli_query($conn, "SELECT items.id, items.title, items.dt, items.shortdesc, items.category, images.col2, items.shortname FROM items JOIN images ON items.shortname=images.name WHERE items.visible=TRUE AND images.num=1 ORDER BY items.realdate DESC");
 
 				while($row = mysqli_fetch_assoc($result)){
           if($row['shortname'] == 'about'){
@@ -92,7 +92,7 @@
             echo "<div class=\"date\">" . $row['dt'] . " - " . $row['category'] . "</div>";
           }
           echo "<div class=\"description\">" . $row['shortdesc'] . "</div>";
-          echo "<div class=\"itemimg\" style=\"background-image: url('_images/" . $row['thumb'] . "');\"></div>";
+          echo "<div class=\"itemimg\" style=\"background-image: url('_images/" . $row['col2'] . "');\"></div>";
           echo "</div></a>";
         }
 			?>
