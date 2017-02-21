@@ -148,6 +148,26 @@
     </nav>
   </div>
 
+  <!-- instagram -->
+
+  <div id="instafeed">
+    <div class="menutitle" id="instagramtitle">
+      <div class="menutitletext">
+        Instagram
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="_js/vendor/instafeed.min.js"></script>
+  <script type="text/javascript">
+      var feed = new Instafeed({
+          get: 'user',
+          userId: '272911938',
+          accessToken: '272911938.1677ed0.ccd741fe216545d2ade34e06305d286d'
+      });
+      feed.run();
+  </script>
+
 </div>
 
 <?php

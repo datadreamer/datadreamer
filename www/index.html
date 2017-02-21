@@ -13,7 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="_css/about.css" />
 
 		<script src="_js/vendor/jquery-1.11.0.min.js"></script>
-    <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    	<script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		<script src="_js/menu.js"></script>
 
 		<script src="_js/vendor/three.min.js"></script>
@@ -24,6 +24,17 @@
 		<script src="_js/vendor/RenderPass.js"></script>
 		<script src="_js/vendor/MaskPass.js"></script>
 		<script src="_js/vendor/ShaderPass.js"></script>
+
+		<script type="text/javascript" src="_js/vendor/instafeed.min.js"></script>
+		<script type="text/javascript">
+		    var feed = new Instafeed({
+		        get: 'user',
+		        userId: '272911938',
+		        accessToken: '272911938.1677ed0.ccd741fe216545d2ade34e06305d286d',
+		        resolution: 'low_resolution'
+		    });
+		    feed.run();
+		</script>
 	</head>
 
 	<body>
@@ -401,6 +412,14 @@
 							<div class="submenutext mainmenutext">Contact</div>
 						</div>
 					</a>
+				</div>
+			</div>
+
+			<div id="instafeed">
+				<div class="menutitle" id="instagramtitle">
+					<div class="menutitletext">
+						Instagram
+					</div>
 				</div>
 			</div>
 
