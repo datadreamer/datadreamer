@@ -158,7 +158,7 @@
     </div>
   </div>
 
-  <script type="text/javascript" src="_js/vendor/instafeed.min.js"></script>
+  <script type="text/javascript" src="/_js/vendor/instafeed.min.js"></script>
   <script type="text/javascript">
       var feed = new Instafeed({
           get: 'user',

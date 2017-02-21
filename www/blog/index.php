@@ -47,6 +47,7 @@
 		<link rel='stylesheet' href='/_css/normalize.min.css'>
 		<link rel='stylesheet' href='/_css/fonts.css' />
 		<link rel='stylesheet' href='/blog/_css/site.css' />
+		<link rel='stylesheet' href='/_css/sitenew.css' />
 
 		<script src='/_js/vendor/jquery-1.11.0.min.js'></script>
         <script src='/_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js'></script>
@@ -187,6 +188,27 @@
 					</div>
 				</a>
 			</div>
+
+			<!-- instagram -->
+
+			<div id="instafeed">
+				<div class="menutitle" id="instagramtitle">
+					<div class="menutitletext">
+						Instagram
+					</div>
+				</div>
+			</div>
+
+			<script type="text/javascript" src="/_js/vendor/instafeed.min.js"></script>
+			<script type="text/javascript">
+			  var feed = new Instafeed({
+			      get: 'user',
+			      userId: '272911938',
+			      accessToken: '272911938.1677ed0.ccd741fe216545d2ade34e06305d286d'
+			  });
+			  feed.run();
+			</script>
+
 		</div>
 
 		<!-- BLOG ENTRIES -->
