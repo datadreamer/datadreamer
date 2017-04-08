@@ -1,22 +1,9 @@
 <?php
+	//ini_set('display_errors', 'On');
+	//error_reporting(E_ALL | E_STRICT);
 	// connect to db
 	$db = mysql_connect("localhost", "asiegel_web", "buttslol!") or die("Failed to connect to server.");
 	mysql_select_db("asiegel_blog") or die("Failed to select database.");
-
-	// prep twitter stuff
-	require_once '../_php/vendor/twitter/twitter.class.php';
-
-	// enables caching (path must exists and must be writable!)
-	// Twitter::$cacheDir = dirname(__FILE__) . '/temp';
-
-
-	// ENTER HERE YOUR CREDENTIALS (see credentials.txt)
-
-	$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-
-	$statuses = $twitter->load(Twitter::ME);
-
-	date_default_timezone_set('America/Los_Angeles');
 
 ?>
 
@@ -46,11 +33,11 @@
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
 		<link rel='stylesheet' href='/_css/normalize.min.css'>
 		<link rel='stylesheet' href='/_css/fonts.css' />
-		<link rel='stylesheet' href='/blog/_css/site.css' />
 		<link rel='stylesheet' href='/_css/sitenew.css' />
+		<link rel='stylesheet' href='/blog/_css/blog.css' />
 
 		<script src='/_js/vendor/jquery-1.11.0.min.js'></script>
-        <script src='/_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js'></script>
+    <script src='/_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js'></script>
 		<script src='/_js/jquery.fittext.js'></script>
 		<script src='/blog/_js/menu.js'></script>
 	</head>
@@ -59,157 +46,8 @@
 
 		<?php
 			include_once("../analyticstracking.php");
+			include("../_php/header.php");
 		?>
-
-		<!-- HEADER -->
-
-		<div id="header" class="noselect">
-			<div id="logo">
-				<a class="logo" href="/">datadreamer</a>
-			</div>
-			<div id="menubutton">
-				<a href="javascript:toggleMenu();"><img src="/blog/_img/menubutton.png"></a>
-			</div>
-			<div id="sublogo">
-				THE WORK OF <a class="sublogo" href="/about">AARON SIEGEL</a>
-			</div>
-		</div>
-
-		<!-- MENU -->
-
-		<div id="menu" class="noselect">
-			<hr>
-
-			<!-- menu titles -->
-
-			<div id="menutitles">
-				<div class="menutitle" id="tweetmenutitle">
-					<div class="menutitletext">
-						Tweets
-					</div>
-				</div>
-				<div class="menutitle" id="postmenutitle">
-					<div class="menutitletext">
-						Posts
-					</div>
-				</div>
-				<div class="menutitle" id="tagmenutitle">
-					<div class="menutitletext">
-						Tags
-					</div>
-				</div>
-				<div class="menutitle" id="mainmenutitle">
-					<div class="menutitletext">
-						Menu
-					</div>
-				</div>
-			</div>
-
-			<!-- tweets -->
-
-			<div class="submenu" id="tweetmenu">
-				<?php
-					// list all tweets fetched when the page loaded.
-					foreach ($statuses as $status){
-						echo "<a href='http://twitter.com/datadreamer/status/{$status->id_str}'>";
-						echo "<div class='submenuitem'>";
-						echo "<div class='submenutext'>$status->text</div>";
-						echo "</div></a>";
-					}
-				?>
-
-			</div>
-
-			<!-- posts -->
-
-			<div class="submenu" id="postmenu">
-				<?php
-					// list all blog posts as buttons to open permalinks.
-					$result = mysql_query("SELECT title,link,r,g,b FROM posts ORDER BY id DESC");
-					while($row = mysql_fetch_assoc($result)){
-						$title = $row['title'];
-						$link = $row['link'];
-						$r = $row['r'];
-						$g = $row['g'];
-						$b = $row['b'];
-						//echo "<a href='http://www.datadreamer.com/blog/{$link}' style='color:rgb({$r},{$g},{$b});'>{$title}</a>";
-						echo "<a href='http://www.datadreamer.com/blog/{$link}'>";
-						echo "<div class='submenuitem'>";
-						echo "<div class='submenutext' style='color:rgb({$r},{$g},{$b});'>{$title}</div>";
-						echo "</div></a>";
-					}
-				?>
-			</div>
-
-			<!-- tags -->
-
-			<div class="submenu" id="tagmenu">
-				<?php
-					// list all tags as buttons to open list of relavent posts.
-					$result = mysql_query("SELECT tag, count(tag) AS num FROM tags GROUP BY tag ORDER BY tag ASC");
-					while($row = mysql_fetch_assoc($result)){
-						$tag = $row['tag'];
-						$num = $row['num'];
-						//echo "<a href='/blog/tag/{$tag}'>{$tag} <font class='tagnum'>{$num}</font></a>";
-						echo "<a href='/blog/tag/{$tag}'>";
-						echo "<div class='submenuitem tagmenuitem'>";
-						echo "<div class='submenutext tagmenutext'>{$tag} <font class='tagnum'>{$num}</font></div>";
-						echo "</div></a>";
-					}
-				?>
-			</div>
-
-			<!-- main menu -->
-
-			<div class="submenu" id="mainmenu">
-				<a href="/">
-					<div class="submenuitem mainmenuitem">
-						<div class="submenutext mainmenutext">Home</div>
-					</div>
-				</a>
-				<a href="http://datadreamer.com/blog">
-					<div class="submenuitem mainmenuitem">
-						<div class="submenutext mainmenutext">Blog</div>
-					</div>
-				</a>
-				<a href="http://datadreamer.com/dailies">
-					<div class="submenuitem mainmenuitem">
-						<div class="submenutext mainmenutext">Dailies</div>
-					</div>
-				</a>
-				<a href="http://datadreamer.com/about">
-					<div class="submenuitem mainmenuitem">
-						<div class="submenutext mainmenutext">About</div>
-					</div>
-				</a>
-				<a href="http://datadreamer.com/contact">
-					<div class="submenuitem mainmenuitem">
-						<div class="submenutext mainmenutext">Contact</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- instagram -->
-
-			<div id="instafeed">
-				<div class="menutitle" id="instagramtitle">
-					<div class="menutitletext">
-						Instagram
-					</div>
-				</div>
-			</div>
-
-			<script type="text/javascript" src="/_js/vendor/instafeed.min.js"></script>
-			<script type="text/javascript">
-			  var feed = new Instafeed({
-			      get: 'user',
-			      userId: '272911938',
-			      accessToken: '272911938.1677ed0.ccd741fe216545d2ade34e06305d286d'
-			  });
-			  feed.run();
-			</script>
-
-		</div>
 
 		<!-- BLOG ENTRIES -->
 

@@ -10,7 +10,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../_css/normalize.min.css">
 		<link rel="stylesheet" href="../_css/fonts.css" />
-		<link rel="stylesheet" href="_css/site.css" />
+		<link rel="stylesheet" href="../_css/sitenew.css" />
+		<link rel="stylesheet" href="_css/blog.css" />
 
 		<script src="../_js/vendor/jquery-1.11.0.min.js"></script>
         <script src="../_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -33,17 +34,19 @@
 
 		<!-- HEADER CONTAINS TITLE -->
 
-		<div id="header" class="noselect">
-			<div id="logo">
-				<a class="logo" href="/">datadreamer</a>
-			</div>
-			<div id="menubutton">
-				<a href="javascript:toggleMenu();"><img src="_img/menubutton.png"></a>
-			</div>
-			<div id="sublogo">
-				THE WORK OF <a class="sublogo" href="/about">AARON SIEGEL</a>
-			</div>
-		</div>
+		<header>
+		  <div id="logo" class="noselect">
+		    <a href="/">datadreamer</a>
+		  </div>
+		  <button type="button" class="btn-navbar" onclick="toggleMenu()">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  <div id="sublogo" class="noselect">
+		    The work of <a href="/about">Aaron Siegel</a>
+		  </div>
+		</header>
 
 		<!-- MENU IS FIXED AND DISPLAY IS TOGGLED -->
 
