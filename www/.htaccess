@@ -4,3 +4,7 @@ RewriteRule ^contact$ /contact.php [L]
 RewriteRule ^blog/([a-z0-9\-]+)$ /blog/index.php?link=$1 [L]
 RewriteRule ^blog/tag/([a-z0-9\-]+)$ /blog/index.php?tag=$1 [L]
 RewriteRule ^item/([a-z0-9\-]+)$ /item.php?name=$1 [L]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.datadreamer.com/$1 [R=301,L]
