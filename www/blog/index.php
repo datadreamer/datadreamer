@@ -33,7 +33,7 @@
 		<meta name="description" content="Explorations of data, systems, interactions, and environments.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
 		<link rel='stylesheet' href='/_css/normalize.min.css'>
 		<link rel='stylesheet' href='/_css/fonts.css' />
 		<link rel='stylesheet' href='/_css/sitenew.css' />

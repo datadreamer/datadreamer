@@ -29,7 +29,7 @@
 
 		<link rel="stylesheet" type="text/css" href="/_css/normalize.min.css" />
 		<link rel="stylesheet" type="text/css" href="/_css/fonts.css" />
-		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' />
+		<link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' />
 		<link rel="stylesheet" type="text/css" href="/_css/sitenew.css" />
 		<link rel="stylesheet" type="text/css" href="/_css/about.css" />
 
