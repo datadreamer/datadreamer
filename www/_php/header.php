@@ -148,9 +148,9 @@
     </nav>
   </div>
 
-  <!-- instagram -->
+  <!-- instagram is now BROKEN and fuck Pixel Union, they botnet your account for followers. -->
 
-  <div id="instafeed">
+  <!-- <div id="instafeed">
     <div class="menutitle" id="instagramtitle">
       <div class="menutitletext">
         Instagram
@@ -163,10 +163,11 @@
       var feed = new Instafeed({
           get: 'user',
           userId: '272911938',
-          accessToken: '272911938.1677ed0.ccd741fe216545d2ade34e06305d286d'
+          clientId: 'b722f41ac894478183dc398bf81219ee',
+          accessToken: '272911938.1677ed0.4096c2f775d84ed48e4703390fedc903'
       });
       feed.run();
-  </script>
+  </script> -->
 
 </div>
 

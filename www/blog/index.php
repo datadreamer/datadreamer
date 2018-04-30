@@ -2,8 +2,10 @@
 	//ini_set('display_errors', 'On');
 	//error_reporting(E_ALL | E_STRICT);
 	// connect to db
-	$db = mysql_connect("localhost", "asiegel_web", "buttslol!") or die("Failed to connect to server.");
-	mysql_select_db("asiegel_blog") or die("Failed to select database.");
+	$conn = mysqli_connect("localhost", "asiegel_web", "buttslol!", "asiegel_blog");
+  if(!$conn){
+    die("Connection failed: " . mysqli_connect_error());
+  }
 
 ?>
 
@@ -15,17 +17,18 @@
         <?php
         	// get article title if linking directly
         	if(!empty($_GET['link'])){
-				$linkname = mysql_escape_string($_GET['link']);
-				$result = mysql_query("SELECT * FROM posts WHERE link = '{$linkname}'");
-				$row = mysql_fetch_assoc($result);
+				$linkname = mysqli_escape_string($_GET['link']);
+				$result = mysqli_query("SELECT * FROM posts WHERE link = '{$linkname}'");
+				$row = mysqli_fetch_assoc($result);
 				$title = $row["title"];
 				echo "<title>{$title} - datadreamer blog</title>";
 			} else if(!empty($_GET['tag'])){
-				$searchtag = mysql_escape_string($_GET['tag']);
+				$searchtag = mysqli_escape_string($_GET['tag']);
 				echo "<title>{$searchtag} - datadreamer blog</title>";
 			} else {
 				echo "<title>datadreamer blog</title>";
 			}
+			mysqli_close($conn);
 		?>
 		<meta name="description" content="Explorations of data, systems, interactions, and environments.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,16 +56,20 @@
 
 		<div id="entries">
 			<?php
+				$conn = mysqli_connect("localhost", "asiegel_web", "buttslol!", "asiegel_blog");
+				if(!$conn){
+					die("Connection failed: " . mysqli_connect_error());
+				}
 				// output blog posts.
 				if(!empty($_GET['link'])){
-					$linkname = mysql_escape_string($_GET['link']);
-					$result = mysql_query("SELECT * FROM posts WHERE link = '{$linkname}'");
+					$linkname = mysqli_escape_string($_GET['link']);
+					$result = mysqli_query($conn, "SELECT * FROM posts WHERE link = '{$linkname}'");
 				} else if(!empty($_GET['tag'])){
-					$result = mysql_query("SELECT * FROM posts INNER JOIN tags ON posts.id = tags.post_id WHERE tags.tag = '{$searchtag}'");
+					$result = mysqli_query($conn, "SELECT * FROM posts INNER JOIN tags ON posts.id = tags.post_id WHERE tags.tag = '{$searchtag}'");
 				} else {
-					$result = mysql_query("SELECT * FROM posts ORDER BY id DESC LIMIT 1");
+					$result = mysqli_query($conn, "SELECT * FROM posts ORDER BY id DESC LIMIT 1");
 				}
-				while($row = mysql_fetch_assoc($result)){
+				while($row = mysqli_fetch_assoc($result)){
 					$id = $row['id'];
 					$title = $row['title'];
 					$link = $row['link'];
@@ -88,8 +95,8 @@
 					echo "<div class='entrybody'>{$body}</div>";
 					// entry tags block
 					echo "<div class='tags'>";
-					$tagresults = mysql_query("SELECT * FROM tags WHERE post_id = '{$id}'");
-					while($tagrow = mysql_fetch_assoc($tagresults)){
+					$tagresults = mysqli_query($conn, "SELECT * FROM tags WHERE post_id = '{$id}'");
+					while($tagrow = mysqli_fetch_assoc($tagresults)){
 						$tag = $tagrow['tag'];
 						echo "<a href='/blog/tag/{$tag}'>$tag</a>, ";
 					}
