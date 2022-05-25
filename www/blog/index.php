@@ -17,13 +17,13 @@
         <?php
         	// get article title if linking directly
         	if(!empty($_GET['link'])){
-				$linkname = mysqli_escape_string($_GET['link']);
+				$linkname = mysqli_escape_string($conn, $_GET['link']);
 				$result = mysqli_query("SELECT * FROM posts WHERE link = '{$linkname}'");
 				$row = mysqli_fetch_assoc($result);
 				$title = $row["title"];
 				echo "<title>{$title} - datadreamer blog</title>";
 			} else if(!empty($_GET['tag'])){
-				$searchtag = mysqli_escape_string($_GET['tag']);
+				$searchtag = mysqli_escape_string($conn, $_GET['tag']);
 				echo "<title>{$searchtag} - datadreamer blog</title>";
 			} else {
 				echo "<title>datadreamer blog</title>";
@@ -62,12 +62,13 @@
 				}
 				// output blog posts.
 				if(!empty($_GET['link'])){
-					$linkname = mysqli_escape_string($_GET['link']);
+					$linkname = mysqli_escape_string($conn, $_GET['link']);
 					$result = mysqli_query($conn, "SELECT * FROM posts WHERE link = '{$linkname}'");
 				} else if(!empty($_GET['tag'])){
 					$result = mysqli_query($conn, "SELECT * FROM posts INNER JOIN tags ON posts.id = tags.post_id WHERE tags.tag = '{$searchtag}'");
 				} else {
-					$result = mysqli_query($conn, "SELECT * FROM posts ORDER BY id DESC LIMIT 1");
+					//$result = mysqli_query($conn, "SELECT * FROM posts ORDER BY id DESC LIMIT 1");
+					$result = mysqli_query($conn, "SELECT * FROM posts ORDER BY id DESC");
 				}
 				while($row = mysqli_fetch_assoc($result)){
 					$id = $row['id'];
