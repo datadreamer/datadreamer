@@ -110,9 +110,9 @@
 					echo "<div class='sharebutton'>";
 					echo "<a href='http://twitter.com/share?text={$title}&url=http://www.datadreamer.com/blog/{$link}'><img src='/blog/_img/share_twitter.png'>";
 					echo "</div>";
-					echo "<div class='sharebutton'>";
-					echo "<a href='https://plus.google.com/share?url=http://www.datadreamer.com/blog/{$link}'><img src='/blog/_img/share_gplus.png'>";
-					echo "</div>";
+					// echo "<div class='sharebutton'>";
+					// echo "<a href='https://plus.google.com/share?url=http://www.datadreamer.com/blog/{$link}'><img src='/blog/_img/share_gplus.png'>";
+					// echo "</div>";
 					echo "<div class='sharebutton'>";
 					echo "<a href='{$link}'><img src='/blog/_img/share_link.png'></a>";
 					echo "</div>";
