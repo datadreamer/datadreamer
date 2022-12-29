@@ -4,10 +4,10 @@
     die("Connection failed: " . mysqli_connect_error());
   }
   // prep twitter stuff
-  require_once 'vendor/twitter/twitter.class.php';
-  // ENTER HERE YOUR CREDENTIALS (see credentials.txt)
-  $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-  $statuses = $twitter->load(Twitter::ME,30);
+  // require_once 'vendor/twitter/twitter.class.php';
+  // // ENTER HERE YOUR CREDENTIALS (see credentials.txt)
+  // $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+  // $statuses = $twitter->load(Twitter::ME,30);
   date_default_timezone_set('America/Los_Angeles');
 ?>
 
@@ -58,16 +58,17 @@
   </div>
 
   <!-- tweets -->
+  <!-- Elon fucking broke the twitter API (12/29/22) -->
 
   <div class="submenu" id="tweetmenu">
     <?php
       // list all tweets fetched when the page loaded.
-      foreach ($statuses as $status){
-        echo "<a href='http://twitter.com/datadreamer/status/{$status->id_str}'>";
-        echo "<div class='submenuitem'>";
-        echo "<div class='submenutext'>$status->text</div>";
-        echo "</div></a>";
-      }
+      // foreach ($statuses as $status){
+      //   echo "<a href='http://twitter.com/datadreamer/status/{$status->id_str}'>";
+      //   echo "<div class='submenuitem'>";
+      //   echo "<div class='submenutext'>$status->text</div>";
+      //   echo "</div></a>";
+      // }
     ?>
 
   </div>
