@@ -1,43 +1,80 @@
-<head>
-<title>PRAETORIANS</title>
-<style type="text/css">
-<!--
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	overflow-y: hidden;
-}
--->
-</style>
-</head>
-<body bgcolor="#ffffff" scroll="no">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PRAETORIANS</title>
+    <meta charset="utf-8">
+    <meta name="description" content="HTML Basics">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script type="text/javascript">
+    <script src="_js/vendor/jquery-3.6.4.min.js"></script>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-212114-1']);
-  _gaq.push(['_trackPageview']);
+    <style type="text/css">
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    body {
+      margin: 0px;
+      overflow-y: hidden;
+    }
 
-</script>
+    #lasik{
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="100%" height="100%" id="lombardi" align="left">
-<param name="allowScriptAccess" value="sameDomain" />
-<param name="movie" value="http://users.design.ucla.edu/~datadreamer/252a/storyboard2.swf" />
-<param name="quality" value="high" />
-<param name="allowFullScreen" value="true" />
-<param name="scale" value="exactFit" />
-<param name="salign" value="lt" />
-<param name="bgcolor" value="#ffffff" />
-<embed src="http://users.design.ucla.edu/~datadreamer/252a/storyboard2.swf" allowFullScreen="true" quality="high" scale="exactFit" salign="lt" bgcolor="#ffffff" width="100%" height="100%" name="lombardi" align="left" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-</object>
+    #welcome{
+      position: fixed;
+      top: 50vh;
+      left: 50vw;
+      text-align: center;
+      margin: auto;
+      color: white;
+      display: none;
+    }
 
-</body>
+    </style>
+  </head>
+
+  <body>
+
+    <video width="100%" height="100%" id="lasik">
+      <source src="_videos/lasik.mp4" type="video/mp4" />
+    </video>
+
+    <div id="welcome">
+      praetorians
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        $("#welcome").delay(500).fadeToggle(2000);
+      })
+
+      $("body").click(function(){
+        var elem = document.getElementById("lasik");
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+          elem.msRequestFullscreen();
+        }
+        $("#welcome").fadeToggle(1000);
+        $("#lasik").trigger("play");
+      })
+    </script>
+
+
+
+  <!-- <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="100%" height="100%" id="lombardi" align="left">
+  <param name="allowScriptAccess" value="sameDomain" />
+  <param name="movie" value="http://users.design.ucla.edu/~datadreamer/252a/storyboard2.swf" />
+  <param name="quality" value="high" />
+  <param name="allowFullScreen" value="true" />
+  <param name="scale" value="exactFit" />
+  <param name="salign" value="lt" />
+  <param name="bgcolor" value="#ffffff" />
+  <embed src="http://users.design.ucla.edu/~datadreamer/252a/storyboard2.swf" allowFullScreen="true" quality="high" scale="exactFit" salign="lt" bgcolor="#ffffff" width="100%" height="100%" name="lombardi" align="left" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+  </object> -->
+
+  </body>
 </html>
