@@ -795,15 +795,15 @@ hr {
 
 
 	/* menu titles */
-	.menutitle{
+	/* .menutitle{
 		width: 25%;
 	}
 	#tweetmenutitle{
 		display: block;
-	}
+	} */
 
 	/* menus */
-	.submenu{
+	/* .submenu{
 		width: 25%;
 	}
 	#tweetmenu{
@@ -812,7 +812,7 @@ hr {
 	}
   #instafeed{
     display: block;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1080px){
