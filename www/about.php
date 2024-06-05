@@ -40,7 +40,7 @@
 					<br/><br/>
 					He has created work for various institutions including the <a href="http://jpl.nasa.gov">NASA Jet Propulsion Laboratory</a>, <a href="http://www.electroland.net">Electroland</a>, <a href="http://www.directedplay.com">Directed Play</a>, the <a href="http://senseable.mit.edu">MIT SENSEable City Laboratory</a>, <a href="http://www.facebook.com">Facebook</a> and <a href="http://www.fabrica.it">Fabrica</a>. He has exhibited work in Los Angeles, San Jose, San Francisco, Salt Lake City, Reno, Memphis, Indianapolis, Seattle, New York, Guadalajara, Madrid, Trieste, Heidelberg, Singapore and Rome. Aaron is currently an Assistant Professor of Teaching, Interactive Technologies at the <a href="https://iovine-young.usc.edu/people/aaron-siegel">University of Southern California Iovine and Young Academy for Arts, Technology, and the Business of Innovation</a>.
 					<br/><br/>
-					<a href="/cv.pdf">Learn more</a> or <a href="/contact">contact</a>.
+					<a href="/cv.html">Learn more</a> or <a href="/contact">contact</a>.
 				</p>
 			</div>
 		</div>
